@@ -1,3 +1,4 @@
+import React from "react"
 import "../scss/styles.scss"   
 
 import { ChakraProvider } from '@chakra-ui/react'

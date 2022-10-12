@@ -15,7 +15,11 @@ import {
 } from "@chakra-ui/react";
 
 const Navabar = () => {
-  return <></>;
+  return (
+    <>
+      <p>NavBar</p>
+    </>
+  );
 };
 
 export default Navabar;
