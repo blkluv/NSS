@@ -8,14 +8,7 @@ import { Product, FooterBanner, HeroBanner } from "../components";
 // IMPORT CHAKRA tools
 import {
   Box,
-  Flex,
-  Stack,
-  Text,
-  ButtonGroup,
-  UnorderedList,
-  ListItem,
-  Button,
-  Container,
+
 } from "@chakra-ui/react";
 
 const Home = ({ products, bannerData}) =>
@@ -25,13 +18,12 @@ const Home = ({ products, bannerData}) =>
         <section className="home-banner-section">
           <Box>
             <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
-            
           </Box>
         </section>
         <section className="home-main-section">
-          <Box>{products?.map((product) => product.name)}</Box>
+          <Box>{products?.map((product) => <Product key={product._id} product={product} />)}</Box>
         </section>
-        <FooterBanner />
+        <FooterBanner footerBanner={bannerData && bannerData[0]}/>
         <section className="home-footer-section"></section>
       </section>
     </>

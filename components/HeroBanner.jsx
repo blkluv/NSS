@@ -1,12 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 //Import IMAGES from client
 import { urlFor } from "../lib/client";
 
 // IMPORT CHAKRA tools
-import { Box, Flex, Stack, Text, Button, Container } from "@chakra-ui/react";
+import { Box, Flex, Stack, Text, Button } from "@chakra-ui/react";
 
 const HeroBanner = ({ heroBanner }) => {
   return (
