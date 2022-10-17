@@ -12,12 +12,12 @@ export default {
         hotspot: true,
       }
     },
-    {
+    { 
       name: 'name',
       title: 'Name',
       type: 'string',
     },
-    {
+    { 
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -26,15 +26,15 @@ export default {
         maxLength: 90,
       }
     },
-    {
-        name: 'price',
+    { 
+      name: 'price',
       title: 'Price',
-      type: 'number', 
+      type: 'number',
     },
-    {
-        name: 'details',
+    { 
+      name: 'details',
       title: 'Details',
-      type: 'string', 
+      type: 'string',
     }
-  ],
-};
+  ]
+}
