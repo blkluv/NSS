@@ -3,7 +3,6 @@ import "../scss/styles.scss"
 
 import { ChakraProvider } from '@chakra-ui/react'
 
-
 import Layout from '../components/Layout'
 
 function MyApp({ Component, pageProps }) {
