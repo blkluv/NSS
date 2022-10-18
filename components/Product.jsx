@@ -13,21 +13,18 @@ const Product = ({ product: { image, name, slug, price } }) => {
       <section className="product-section">
         <Box>
           <Link href={`/product/${slug.current}`}>
-            <>
-              <Box className="product-image-box">
-                <img
-                  src={urlFor(image && image[0])}
-                  alt="Product Image"
-                  height={250}
-                  width={250}
-                  className="product-image"
-                />
-              </Box>
-              <Box>
-                <Text className="product-name">{name}</Text>
-                <Text className="product-price">ETH{price}</Text>
-              </Box>
-            </>
+            <Box className="product-image-box">
+              <img
+                src={urlFor(image && image[0])}
+                alt="Product Image"
+                height={250}
+                width={250}
+                className="product-image"
+              />
+
+              <Text className="product-name">{name}</Text>
+              <Text className="product-price">ETH{price}</Text>
+            </Box>
           </Link>
         </Box>
       </section>

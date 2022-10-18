@@ -1,13 +1,15 @@
 /* IMPORT-FONTS FAMILY */
-
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200;300;400;500;600;700;800;900&family=Julius+Sans+One&family=Monda:wght@400;700&family=Unica+One&display=swap');
 
 /*----------------------------- FONTS FAMILY ------------------------*/
 :root {
   /*----------- MAIN ---------*/
-  // --ft-title-space: 'Space Grotesk', sans-serif;
-  
+ --ft-sub-title: 'Crimson Pro', serif;
+ --ft-main-title: 'Unica One', cursive;
 
 
-
+ /*----------- ALT ---------*/
+ --ft-btn-text: 'Julius Sans One', sans-serif;
+ --ft-main-text:  'Monda', sans-serif;
 }
 
