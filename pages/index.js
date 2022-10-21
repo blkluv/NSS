@@ -20,8 +20,8 @@ const Home = ({ products, bannerData}) =>
             <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
           </Box>
         </section>
-        <section className="home-main-section">
-          <Box>{products?.map((product) => <Product key={product._id} product={product} />)}</Box>
+        <section >
+          <Box className="home-main-section" mb={["10rem", "10rem", "15rem"]} mt={["4rem", "7rem", "7rem"]}>{products?.map((product) => <Product key={product._id} product={product} />)}</Box>
         </section>
         <FooterBanner footerBanner={bannerData && bannerData[0]}/>
         <section className="home-footer-section"></section>

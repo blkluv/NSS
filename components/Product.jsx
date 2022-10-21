@@ -10,24 +10,26 @@ import { Box, Flex, Stack, Text, Button } from "@chakra-ui/react";
 const Product = ({ product: { image, name, slug, price } }) => {
   return (
     <>
-      <section className="product-section">
-        <Box>
-          <Link href={`/product/${slug.current}`}>
-            <Box className="product-image-box">
+      <Box>
+        <Link href={`/product/${slug.current}`}>
+          <Box className="product-card">
+            <Box
+              w={["10.2rem", "15rem", "20rem"]}
+              h={["10.2rem", "15rem", "20rem"]}
+            >
               <img
                 src={urlFor(image && image[0])}
                 alt="Product Image"
-                height={250}
-                width={250}
+                objectFit="fill"
                 className="product-image"
               />
-
-              <Text className="product-name">{name}</Text>
-              <Text className="product-price">ETH{price}</Text>
             </Box>
-          </Link>
-        </Box>
-      </section>
+            {/* 
+            <Text className="product-name">{name}</Text>
+            <Text className="product-price">ETH{price}</Text> */}
+          </Box>
+        </Link>
+      </Box>
     </>
   );
 };
