@@ -2,12 +2,95 @@
 .footer-banner-section{
     padding: 6.25rem 2.5rem;
     background-color: var(--clr-bg-orange);
+    // background-image: url('../../../dist/gif/8619090efa9e751cb94097a1f1a18f1b.webp');
+    // background-position: center;
     border-radius: 0.938rem;
     position: relative;
-    height: 25rem;
+    height: fit-content;
     width: 100%;
-    margin-top: 7.5rem;
+    margin-top: 3.5rem;
+    margin-bottom: 2rem;
 }
 
 
+// .footer-banner-desc-box {
+
+// }
+
+.footer-banner-desc-left {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-banner-desc-right{
+
+}
+
 //-------------- TITLES SECTION -----------
+//LEFT TEXTS
+.footer-banner-desc-discount {
+    font-family: var(--ft-main-text);
+    text-transform: uppercase;
+    
+}
+
+.footer-banner-desc-largeText1 {
+    // font-family: var(--ft-main-text);
+    font-family: var( --ft-main-title);
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.footer-banner-desc-largeText2 {
+    // font-family: var(--ft-main-text);
+    font-family: var( --ft-main-title);
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.footer-banner-desc-saleTime {
+    font-family: var(--ft-main-text);
+    text-transform: uppercase;
+    white-space: nowrap;
+    
+}
+
+//RIGHT TEXTS
+.footer-banner-desc-smallText {
+    font-family: var(--ft-sub-title);
+    text-transform: uppercase;
+     color: var(--clr-txt-grey-70);
+}
+
+.footer-banner-desc-midText {
+    font-family: var(--ft-sub-title);
+    text-transform: uppercase;
+     color: var(--clr-txt-grey-70);
+}
+
+.footer-banner-desc-desc {
+    font-family: var(--ft-main-text);
+   
+}
+
+
+//-------------- BTN SECTION -----------
+.footer-banner-product-btn {
+    border: 1px solid var(--clr-btn-contact-dark);
+    border-radius: 0px !important;
+    background-color: var(--clr-bg-white) !important;
+    font-family: var( --ft-main-title);
+    text-transform: uppercase;
+}
+
+//-------------- IMG SECTION -----------
+
+.hero-banner-image-box {
+    position: absolute;
+    top: 2.9%;
+    right:2%;
+    z-index: 1;
+}
+// .footer-banner-image {
+   
+// }

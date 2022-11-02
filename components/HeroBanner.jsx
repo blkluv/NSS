@@ -69,7 +69,7 @@ const HeroBanner = ({ heroBanner }) => {
           </Stack>
           <Box className="hero-banner-button-box" mb={6}>
             <Link href={`/product/${heroBanner.product}`}>
-              <Button className="hero-banner-button">
+              <Button className="hero-banner-button" size={["md", "lg", "lg"]}>
                 {heroBanner.buttonText}{" "}
               </Button>
             </Link>
