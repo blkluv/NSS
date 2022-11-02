@@ -10,7 +10,8 @@ export default function Layout({ children }) {
     <>
       <div className="layout">
         <Head>
-          <title className="head-title">Online Shop</title>
+          <title className="head-title">MTNlabs - NFT SHOP</title>
+          <link rel="shortcut icon" href="/favicon.ico" />
         </Head>
         <header>
           <Navbar />

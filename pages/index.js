@@ -6,7 +6,7 @@ import { client } from "../lib/client";
 //IMPORT Internal components
 import { Product, FooterBanner, HeroBanner } from "../components";
 // IMPORT CHAKRA tools
-import { Box } from "@chakra-ui/react";
+import { Box, Stack, Text } from "@chakra-ui/react";
 
 const Home = ({ products, bannerData, footerBannerData }) => (
   <>
@@ -16,19 +16,38 @@ const Home = ({ products, bannerData, footerBannerData }) => (
           <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
         </Box>
       </section>
-      <section>
-        <Box
-          className="home-main-section"
-          mb={["10rem", "10rem", "15rem"]}
-          mt={["4rem", "7rem", "7rem"]}
-        >
-          {products?.map((product) => (
-            <Product key={product._id} product={product} />
-          ))}
+      <section className="home-center-section">
+        <Box mb={["10rem", "10rem", "15rem"]} mt={["4rem", "7rem", "7rem"]}>
+          <Stack
+            justifyContent="center"
+            alignItems="center"
+            direction="column"
+            mb={10}
+          >
+            <Text
+              className="notable-collection-title"
+              fontSize={["2.2rem", "3.2rem", "5.3rem"]}
+            >
+              Notable Collection
+            </Text>
+            <Text
+              className="notable-collection-sub-title"
+              fontSize={["1rem", "1.9rem", "3rem"]}
+            >
+              Latest nft drop
+            </Text>
+          </Stack>
+          <Box className="home-main-section">
+            {products?.map((product) => (
+              <Product key={product._id} product={product} />
+            ))}
+          </Box>
         </Box>
       </section>
       <section>
-      <FooterBanner footerBanner={footerBannerData.length && footerBannerData[0]} />
+        <FooterBanner
+          footerBanner={footerBannerData.length && footerBannerData[0]}
+        />
         {console.log(footerBannerData)}
       </section>
     </section>

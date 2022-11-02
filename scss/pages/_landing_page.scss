@@ -6,3 +6,16 @@
 
 
 //-------------- TITLES SECTION -----------
+.notable-collection-title {
+    font-family: var( --ft-main-text);
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.notable-collection-sub-title {
+    font-family: var( --ft-main-text);
+    font-weight: 400;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: var(--clr-txt-grey-70);
+}
