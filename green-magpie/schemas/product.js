@@ -13,8 +13,13 @@ export default {
       }
     },
     { 
-      name: 'name',
-      title: 'Name',
+      name: 'artistName',
+      title: 'Artist Name',
+      type: 'string',
+    },
+    { 
+      name: 'itemName',
+      title: 'Item Name',
       type: 'string',
     },
     { 

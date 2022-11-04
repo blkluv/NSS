@@ -1,0 +1,179 @@
+//-------------- SECTIONS -----------
+.product-details-section {
+    background-color: purple;
+
+}
+
+.product-details-main-box {
+background-color: yellowgreen;
+}
+
+
+
+.product-details-right-box {
+    background-color: pink;
+}
+
+.product-details-options-box {
+    background-color: aqua;
+}
+
+.product-details-product-name-box {
+
+}
+
+.product-details-desc-box {
+    background-color: greenyellow;
+}
+
+.product-details-price-box {
+    background-color: hotpink;
+}
+
+.product-details-quantity-icons-box {
+    background-color: blueviolet;
+}
+
+//CAROUSEL SECTION
+.maylike-products-wrapper {
+    margin-top: 120px;
+}
+
+.maylike-products-title {
+    text-align: center;
+}
+
+.marquee {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    overflow-x: hidden;
+    will-change: transform;
+    animation: marquee 15s linear infinite;
+//     position: absolute;
+//   white-space: nowrap;
+ 
+}
+
+.maylike-products-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+@keyframes marquee {
+    // from { transform: translateX(0); }
+    // to { transform: translateX(-50%); }
+    0% { left: 0; }
+  100% { left: -100%; }
+  }
+
+// .track {
+//     position: absolute;
+//     white-space: nowrap;
+//     // will-change: transform;
+//     // animation: marquee 5s linear infinite;
+//     width: 180%;
+// }
+
+// .track:hover {
+//     animation-play-state: paused;
+//   }
+
+ 
+// @media screen and (max-width:800px) {
+//     .track {
+//         animation: marquee 10s linear infinite;
+//         width: 550%;
+//       }
+// }
+
+//-------------- TITLES SECTION -----------
+.product-details-artist-name {
+    background-color: red;
+    font-family: var( --ft-main-title);
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.product-details-product-name {
+    background-color: yellow;
+    font-family: var(--ft-main-text);
+    text-transform: uppercase;
+    // white-space: nowrap;
+}
+
+
+.product-details-details-tag {
+    font-family: var(--ft-main-text);
+    // text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--clr-txt-grey-50);
+}
+
+.product-details-details-text {
+    font-family: var(--ft-main-text);
+    color: var(--clr-txt-grey-30);
+}
+
+.product-details-price-tag {
+    font-family: var(--ft-main-text);
+    // text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--clr-txt-grey-50);
+}
+
+.product-details-price {
+    font-family: var(--ft-main-text);
+    
+}
+
+.product-details-quantity {
+    background-color: goldenrod;
+    font-family: var(--ft-main-text);
+    // text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--clr-txt-grey-50);
+}
+
+.product-details-quantity-minus {
+
+}
+
+.product-details-quantity-plus {
+    
+}
+
+.product-details-quantity-num {
+
+}
+
+
+//---------- BTN -------------
+.product-details-add-card-btn {
+    border: 1px solid var(--clr-btn-contact-dark);
+    border-radius: 0px !important;
+    background-color: var(--clr-bg-white) !important;
+    font-family: var( --ft-main-title);
+    text-transform: uppercase;
+}
+
+
+.product-details-buy-now-btn {
+    border: 1px solid var(--clr-btn-contact-dark);
+    border-radius: 0px !important;
+    background-color: var(--clr-bg-white) !important;
+    font-family: var( --ft-main-title);
+    text-transform: uppercase;
+}
+
+
+//--------------- IMG ----
+// .product-details-img-box {
+
+// }
+// .product-details-img {
+   
+// }
