@@ -160,7 +160,12 @@ const ProductDetails = ({ product, products }) => {
           </Flex>
         </Box>
         <Box className="maylike-products-wrapper">
-          <Text className="maylike-products-title">You may also like</Text>
+          <Text
+            className="maylike-products-title"
+            fontSize={["1.2rem", "1.7rem", "2.5rem"]}
+          >
+            You may also like
+          </Text>
           <Box className="marquee">
             <Box className="maylike-products-container track">
               {products.map((item) => (

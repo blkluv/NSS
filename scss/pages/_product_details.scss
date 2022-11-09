@@ -60,6 +60,7 @@ background-color: yellowgreen;
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
+   
 }
 
 
@@ -70,13 +71,13 @@ background-color: yellowgreen;
   100% { left: -100%; }
   }
 
-// .track {
-//     position: absolute;
-//     white-space: nowrap;
-//     // will-change: transform;
-//     // animation: marquee 5s linear infinite;
-//     width: 180%;
-// }
+.track {
+    
+    white-space: nowrap;
+    // will-change: transform;
+    // animation: marquee 5s linear infinite;
+    width: 60%;
+}
 
 // .track:hover {
 //     animation-play-state: paused;
@@ -127,7 +128,6 @@ background-color: yellowgreen;
 
 .product-details-price {
     font-family: var(--ft-main-text);
-    
 }
 
 .product-details-quantity {
@@ -138,17 +138,21 @@ background-color: yellowgreen;
     color: var(--clr-txt-grey-50);
 }
 
-.product-details-quantity-minus {
-
+.maylike-products-title {
+    font-family: var(--ft-main-text);
 }
 
-.product-details-quantity-plus {
+// .product-details-quantity-minus {
+
+// }
+
+// .product-details-quantity-plus {
     
-}
+// }
 
-.product-details-quantity-num {
+// .product-details-quantity-num {
 
-}
+// }
 
 
 //---------- BTN -------------
