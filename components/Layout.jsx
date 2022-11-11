@@ -14,7 +14,9 @@ export default function Layout({ children }) {
           <link rel="shortcut icon" href="/favicon.ico" />
         </Head>
         <header>
-          <Navbar />
+          <nav>
+            <Navbar />
+          </nav>
         </header>
         <main className="layout-main-container">{children}</main>
         <footer>

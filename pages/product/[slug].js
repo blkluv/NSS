@@ -17,10 +17,7 @@ import {
   Stack,
   Text,
   Button,
-  VStack,
   HStack,
-  Divider,
-  Spacer,
   Container,
 } from "@chakra-ui/react";
 
@@ -123,16 +120,13 @@ const ProductDetails = ({ product, products }) => {
                           className="product-details-quantity-minus"
                           onClick={decQty}
                         >
-                          <HiMinus size={"20px"}/>
+                          <HiMinus size={"20px"} />
                         </span>
                       </Text>
 
                       <Text fontSize={["0.8rem", "1.5rem", "1.2rem"]}>
-                        <span
-                          className="product-details-quantity-num"
-                          
-                        >
-                         {qty}
+                        <span className="product-details-quantity-num">
+                          {qty}
                         </span>
                       </Text>
                       <Text>
@@ -141,7 +135,7 @@ const ProductDetails = ({ product, products }) => {
                           onClick={incQty}
                         >
                           {" "}
-                          <HiPlusSm size={"20px"}/>
+                          <HiPlusSm size={"20px"} />
                         </span>
                       </Text>
                     </HStack>
