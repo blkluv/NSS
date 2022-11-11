@@ -7,6 +7,9 @@ import { client, urlFor } from "../../lib/client";
 //IMPORT internal components
 import { Product } from "../../components";
 
+//IMPORT Context as hook
+import { useStateContext } from "../../context/StateContext";
+
 // IMPORT CHAKRA tools
 import {
   Box,
@@ -26,6 +29,7 @@ import { HiPlusSm, HiMinus } from "react-icons/hi";
 
 const ProductDetails = ({ product, products }) => {
   const { image, artistName, itemName, details, price } = product;
+  const { decQty, incQty, qty, onAdd } = useStateContext();
   return (
     <>
       <section className="product-details-section">
@@ -117,27 +121,27 @@ const ProductDetails = ({ product, products }) => {
                       <Text>
                         <span
                           className="product-details-quantity-minus"
-                          onClick=""
+                          onClick={decQty}
                         >
-                          <HiMinus />
+                          <HiMinus size={"20px"}/>
                         </span>
                       </Text>
 
-                      <Text>
+                      <Text fontSize={["0.8rem", "1.5rem", "1.2rem"]}>
                         <span
                           className="product-details-quantity-num"
-                          onClick=""
+                          
                         >
-                          0
+                         {qty}
                         </span>
                       </Text>
                       <Text>
                         <span
                           className="product-details-quantity-plus"
-                          onClick=""
+                          onClick={incQty}
                         >
                           {" "}
-                          <HiPlusSm />
+                          <HiPlusSm size={"20px"}/>
                         </span>
                       </Text>
                     </HStack>
@@ -147,7 +151,7 @@ const ProductDetails = ({ product, products }) => {
                   <Button
                     className="product-details-add-card-btn"
                     mr={10}
-                    onClick=""
+                    onClick={() => onAdd(product, qty)}
                   >
                     ADD TO CART
                   </Button>
