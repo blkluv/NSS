@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { RiShoppingCartLine } from "react-icons/ri";
 
-import { Cart } from "./Cart";
+import { Cart } from "./";
 import { useStateContext } from "../context/StateContext";
 
 import { Spacer, Box, Flex, Text } from "@chakra-ui/react";

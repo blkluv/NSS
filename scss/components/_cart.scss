@@ -1,0 +1,161 @@
+//-------------- SECTIONS -----------
+//CART
+.cart-wrapper {
+    width: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    right: 0;
+    top: 0;
+    z-index: 100;
+    // will-change: transform; 
+    transition: all 1s ease-in-out;
+}
+
+.cart-container {
+    height: 100vh ;
+    // width: 600px;
+    float: right;
+    position: relative;
+    padding: 2.5rem 2rem;
+    background-color: var(--clr-bg-orange);
+}
+
+.cart-heading {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 2px;
+//    background-color: transparent !important;
+   
+}
+
+.cart-heading .heading{
+    margin-left: 10px;
+  }
+
+
+
+  .cart-num-items{
+    margin-left: 10px;
+    color: var(--clr-bg-orange);
+  }
+
+
+  //PRODUCT
+  .product-container {
+    overflow: auto;
+    max-height: 70vh;
+    padding: 5px 5px;
+    background-color: var(--clr-bg-white);
+    // border-radius: 10px;
+  }
+
+
+  .product {
+    display: flex;
+    gap: 30px;
+     padding: 20px;
+  }
+
+  .product .cart-product-image{
+    width:130px ;
+    height: 110px;
+    border-radius: 15px;
+  }
+
+  .cart-bottom {
+    position: absolute;
+    bottom: 12px;
+    right: 5px;
+    padding: 30px 65px;
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-------------- TITLES SECTION -----------
+
+.heading{
+    font-family: var( --ft-main-title);
+    text-transform: uppercase;
+    font-weight: 800;
+    white-space: nowrap;
+    color: var(--clr-txt-blk-50);
+}
+
+.cart-num-items {
+    font-family: var( --ft-main-title);
+    font-weight: 100;
+}
+
+.empty-card_text {
+    font-family: var(--ft-main-text);
+    font-weight: 100;
+    text-transform:lowercase
+}
+
+.product-cart-price-tag {
+    font-family: var(--ft-main-text);
+    font-weight: 400;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.cart-bottom-subtotal {
+    font-family: var(--ft-main-text);
+    font-weight: 100;
+    text-transform:lowercase
+}
+
+.cart-bottom-price {
+    font-family: var(--ft-main-text);
+    font-weight: 400;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+//-------------- BUTTON -----------
+.continue-exploring {
+    border: 1px solid var(--clr-btn-contact-dark);
+    background-color: var(--clr-bg-orange) !important;
+    color: var(--clr-txt-wht) ;
+    font-family: var( --ft-main-title);
+    text-transform: uppercase;
+}
+
+.remove-item {
+    cursor: pointer;
+    background: transparent !important;
+    border: none;
+    color: red;
+}
+
+.pay-btn {
+    border: 1px solid ;
+    background-color: var(--clr-txt-wht) !important;
+    color: var(--clr-bg-orange) ;
+    font-family: var( --ft-main-title);
+    text-transform: uppercase;
+}
