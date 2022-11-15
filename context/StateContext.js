@@ -15,6 +15,10 @@ export const StateContext = ({ children }) => {
   const [totalQuantities, setTotalQuantities] = useState(0);
   const [qty, setQty] = useState(1);
 
+  //FIND PRODUCT TO UPDATE
+  let foundProduct;
+  let index;
+
   //-------- ADD PRODUCTS TO CART --------------
   //+ check if in card + update price + update qty
   const onAdd = (product, quantity) => {
@@ -45,6 +49,8 @@ export const StateContext = ({ children }) => {
 
     toast.success(`${qty} ${product.itemName} added to the cart.`);
   };
+
+
 
   //-------- REMOVE PRODUCTS FROM CART --------------
 

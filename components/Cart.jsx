@@ -3,12 +3,6 @@ import Link from "next/link";
 
 //IMPORT ICONS
 import { HiPlusSm, HiMinus } from "react-icons/hi";
-import {
-  AiOutlineMinus,
-  AiOutlinePlus,
-  AiOutlineLeft,
-  AiOutlineShopping,
-} from "react-icons/ai";
 import { BsReverseBackspaceReverse } from "react-icons/bs";
 import { TiDeleteOutline } from "react-icons/ti";
 import toast from "react-hot-toast";
@@ -21,8 +15,14 @@ import { Spacer, Box, Flex, Text, Button, HStack } from "@chakra-ui/react";
 
 const Cart = () => {
   const cartRef = useRef();
-  const { totalPrice, totalQuantities, cartItems, setShowCart } =
-    useStateContext();
+  const {
+    totalPrice,
+    totalQuantities,
+    cartItems,
+    setShowCart,
+    toggleCartItemQuantity,
+    onRemove,
+  } = useStateContext();
   return (
     <>
       <Box className="cart-wrapper" ref={cartRef}>
@@ -60,55 +60,52 @@ const Cart = () => {
                     alt="product-image"
                     className="cart-product-image"
                   />
-                  <Box>
-                    <Box>
-                      <Flex justifyContent="space-between">
+                  <Box className="item-desc">
+                    <Box className="flex top">
+                      <Flex>
                         <Text className="product-details-product-name">
                           {item.itemName}
                         </Text>
-
                         <Text className="product-cart-price-tag" ml={2}>
                           ETH {item.price}
                         </Text>
                       </Flex>
                     </Box>
-                    <Box mt={5}>
-                      <HStack>
-                        <Box>
-                          <HStack>
-                            <Text>
-                              <span
-                                className="product-details-quantity-minus"
-                                onClick=""
-                              >
-                                <HiMinus size={"20px"} />
-                              </span>
-                            </Text>
 
-                            <Text fontSize={["0.8rem", "1.5rem", "1.2rem"]}>
-                              <span className="product-details-quantity-num">
-                                0
-                              </span>
-                            </Text>
-                            <Text>
-                              <span
-                                className="product-details-quantity-plus"
-                                onClick=""
-                              >
-                                {" "}
-                                <HiPlusSm size={"20px"} />
-                              </span>
-                            </Text>
-                          </HStack>
-                        </Box>
-                        <Spacer />
-                        <Box>
-                          <Button className="remove-item" onClick="">
-                            <TiDeleteOutline size={"20px"} />
-                          </Button>
-                        </Box>
-                      </HStack>
-                    </Box>
+                    <HStack mt={10}>
+                      <Box>
+                        <HStack className="flex-bottom">
+                          <Text className="minus">
+                            <span
+                              onClick={() =>
+                                toggleCartItemQuantity(item._id, "dec")
+                              }
+                            >
+                              <HiMinus />
+                            </span>
+                          </Text>
+                          <Text className="num">
+                            <span onClick="">{item.quantity}</span>
+                          </Text>
+                          <Text className="plus">
+                            <span
+                              onClick={() =>
+                                toggleCartItemQuantity(item._id, "inc")
+                              }
+                            >
+                              <HiPlusSm />
+                            </span>
+                          </Text>
+                        </HStack>
+                      </Box>
+                      <Spacer />
+                      <Button
+                        className="remove-item"
+                        onClick={() => onRemove(item)}
+                      >
+                        <TiDeleteOutline size={"20px"} />
+                      </Button>
+                    </HStack>
                   </Box>
                 </Box>
               ))}
