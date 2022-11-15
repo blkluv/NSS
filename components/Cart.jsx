@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import Link from "next/link";
 
 //IMPORT ICONS
 import { HiPlusSm, HiMinus } from "react-icons/hi";
@@ -9,6 +8,7 @@ import toast from "react-hot-toast";
 
 import { useStateContext } from "../context/StateContext";
 import { urlFor } from "../lib/client";
+import getStripe from "../lib/getStripe";
 //, toggleCartItemQuantity, onRemove
 
 import { Spacer, Box, Flex, Text, Button, HStack } from "@chakra-ui/react";
@@ -23,6 +23,26 @@ const Cart = () => {
     toggleCartItemQuantity,
     onRemove,
   } = useStateContext();
+
+  const handleCheckout = async () => {
+    const stripe = await getStripe();
+
+    const response = await fetch("/api/stripe", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(cartItems),
+    });
+
+    if (response.statusCode === 500) return;
+
+    const data = await response.json();
+
+    toast.loading("Redirecting...");
+
+    stripe.redirectToCheckout({ sessionId: data.id });
+  };
   return (
     <>
       <Box className="cart-wrapper" ref={cartRef}>
@@ -67,7 +87,7 @@ const Cart = () => {
                           {item.itemName}
                         </Text>
                         <Text className="product-cart-price-tag" ml={2}>
-                          ETH {item.price}
+                          $ {item.price}
                         </Text>
                       </Flex>
                     </Box>
@@ -138,6 +158,7 @@ const Cart = () => {
                 <Button
                   className="pay-btn"
                   fontSize={["0.8rem", "1.5rem", "1.2rem"]}
+                  onClick={handleCheckout}
                 >
                   Pay with Stripe
                 </Button>

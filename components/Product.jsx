@@ -7,7 +7,7 @@ import { urlFor } from "../lib/client";
 // IMPORT CHAKRA tools
 import { Box, Flex, Stack, Text, Button } from "@chakra-ui/react";
 
-const Product = ({ product: { image, name, slug, price } }) => {
+const Product = ({ product: { image, slug } }) => {
   return (
     <>
       <Box>
@@ -20,7 +20,6 @@ const Product = ({ product: { image, name, slug, price } }) => {
               <img
                 src={urlFor(image && image[0])}
                 alt="Product Image"
-                objectFit="fill"
                 className="product-image"
               />
             </Box>

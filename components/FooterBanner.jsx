@@ -101,7 +101,6 @@ const FooterBanner = ({ footerBanner }) => {
             <img
               src={urlFor(footerBanner.image)}
               alt="banner Image"
-              objectFit="fill"
               className="footer-banner-image"
             />
           </Box>

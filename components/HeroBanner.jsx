@@ -62,7 +62,6 @@ const HeroBanner = ({ heroBanner }) => {
               <img
                 src={urlFor(heroBanner.image)}
                 alt="banner Image"
-                objectFit="fill"
                 className="hero-banner-image"
               />
             </Box>

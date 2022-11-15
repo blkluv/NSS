@@ -43,9 +43,7 @@ const ProductDetails = ({ product, products }) => {
               h={["auto"]}
             >
               <img
-                priority
                 alt="banner Image"
-                objectFit="fill"
                 className="product-details-img"
                 src={urlFor(image && image[0])}
               />
@@ -102,8 +100,9 @@ const ProductDetails = ({ product, products }) => {
                     className="product-details-price"
                     fontSize={["1.2rem", "1.7rem", "2.5rem"]}
                   >
+                    <span className="product-details-price-span">$</span>{" "}
                     {price}{" "}
-                    <span className="product-details-price-span">ETH</span>{" "}
+                    
                   </Text>
                 </Stack>
                 <HStack>
