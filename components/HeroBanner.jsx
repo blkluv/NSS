@@ -5,15 +5,7 @@ import Link from "next/link";
 import { urlFor } from "../lib/client";
 
 // IMPORT CHAKRA tools
-import {
-  Box,
-  Flex,
-  Stack,
-  Text,
-  Button,
-  Spacer,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Stack, Text, Button, Spacer, VStack } from "@chakra-ui/react";
 
 const HeroBanner = ({ heroBanner }) => {
   return (
@@ -67,11 +59,9 @@ const HeroBanner = ({ heroBanner }) => {
             </Box>
           </Stack>
           <Box className="hero-banner-button-box" mb={6}>
-            <Link href={`/product/${heroBanner.product}`}>
-              <Button className="hero-banner-button" size={["md", "lg", "lg"]}>
-                {heroBanner.buttonText}{" "}
-              </Button>
-            </Link>
+            <Button className="hero-banner-button" size={["md", "lg", "lg"]}>
+              Click Me
+            </Button>
           </Box>
           <Box className="hero-banner-desc-box" mt={["-1.5rem", "auto"]}>
             <Box className="hero-banner-desc-up-text-box">

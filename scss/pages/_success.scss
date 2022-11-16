@@ -1,0 +1,63 @@
+//-------------- SECTIONS -----------
+.success-wrapper {
+    min-height: 60vh;
+  }
+
+.success {
+  margin-top: 5rem;
+//   margin: auto;
+  padding: 50px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: orangered;
+  h2 {
+  font-family: var(--ft-main-text);
+  text-transform: capitalize;
+  font-size: var(--font-size-20);
+  margin-top: 25px ;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--clr-bg-white);
+  white-space: nowrap;
+  }
+  
+}
+
+.icon {
+    color: var(--clr-bg-white);
+    font-size: 40px;
+}
+
+
+
+
+
+
+//-------------- TITLES SECTION -----------
+
+.email-msg {
+    font-family: var(--ft-main-text);
+    font-size: var(--font-size-14);
+    white-space: nowrap;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    color: var(--clr-txt-grey-50);
+    text-align: center;
+  }
+
+  .description {
+    font-family: var(--ft-main-text);
+    font-size: var(--font-size-12);
+    letter-spacing: 1px;
+    color: var(--clr-txt-grey-30);
+    text-align: center;
+    margin-top: 1.5rem;
+    a {
+    font-family: var(--ft-main-text);
+    font-size: var(--font-size-12);
+    color: var(--clr-txt-grey-30);
+    }
+  }
