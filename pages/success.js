@@ -4,7 +4,7 @@ import Link from "next/link";
 import { BsEmojiLaughing } from "react-icons/bs";
 
 import { useStateContext } from "../context/StateContext";
-// import { runFireworks } from "../lib/utils";
+import { runFireworks } from "../lib/utils";
 
 // IMPORT CHAKRA tools
 import { Box,  Button,  } from "@chakra-ui/react";
@@ -18,7 +18,7 @@ const sucess = () => {
     setCartItems([]);
     setTotalPrice(0);
     setTotalQuantities(0);
-    // runFireworks();
+    runFireworks();
   }, []);
 
   return (
