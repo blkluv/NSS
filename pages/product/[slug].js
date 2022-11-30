@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 
 //IMPORT IMAGES from client
 import { client, urlFor } from "../../lib/client";
@@ -26,7 +25,12 @@ import { HiPlusSm, HiMinus } from "react-icons/hi";
 
 const ProductDetails = ({ product, products }) => {
   const { image, artistName, itemName, details, price } = product;
-  const { decQty, incQty, qty, onAdd } = useStateContext();
+  const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
+  const handleBuyNow = () => {
+    onAdd(product, qty);
+
+    setShowCart(true);
+  }
   return (
     <>
       <section className="product-details-section">
@@ -148,7 +152,7 @@ const ProductDetails = ({ product, products }) => {
                   >
                     ADD TO CART
                   </Button>
-                  <Button className="product-details-buy-now-btn" onClick="">
+                  <Button className="product-details-buy-now-btn" onClick={handleBuyNow}>
                     BUY NOW
                   </Button>
                 </Flex>
