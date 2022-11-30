@@ -145,7 +145,7 @@ const Cart = () => {
                     className="cart-bottom-price"
                     fontSize={["0.8rem", "1.5rem", "1.2rem"]}
                   >
-                    ETH {totalPrice}
+                    $ {totalPrice}
                   </Text>
                 </HStack>
               </Box>

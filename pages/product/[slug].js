@@ -22,6 +22,8 @@ import {
 
 //IMPORT ICONS
 import { HiPlusSm, HiMinus } from "react-icons/hi";
+import { RiShoppingCartLine } from "react-icons/ri";
+import { TbPaperBag } from "react-icons/tb";
 
 const ProductDetails = ({ product, products }) => {
   const { image, artistName, itemName, details, price } = product;
@@ -30,7 +32,7 @@ const ProductDetails = ({ product, products }) => {
     onAdd(product, qty);
 
     setShowCart(true);
-  }
+  };
   return (
     <>
       <section className="product-details-section">
@@ -60,7 +62,7 @@ const ProductDetails = ({ product, products }) => {
                     <Box>
                       <Text
                         className="product-details-artist-name"
-                        fontSize={["3rem", "6.5rem", "7rem"]}
+                        fontSize={["2rem", "6.5rem", "7rem"]}
                       >
                         {artistName}
                       </Text>
@@ -106,7 +108,6 @@ const ProductDetails = ({ product, products }) => {
                   >
                     <span className="product-details-price-span">$</span>{" "}
                     {price}{" "}
-                    
                   </Text>
                 </Stack>
                 <HStack>
@@ -144,18 +145,26 @@ const ProductDetails = ({ product, products }) => {
                     </HStack>
                   </Box>
                 </HStack>
-                <Flex justifyContent="center" alignItems="center">
-                  <Button
-                    className="product-details-add-card-btn"
-                    mr={10}
-                    onClick={() => onAdd(product, qty)}
-                  >
-                    ADD TO CART
-                  </Button>
-                  <Button className="product-details-buy-now-btn" onClick={handleBuyNow}>
-                    BUY NOW
-                  </Button>
-                </Flex>
+                <Box className="btn-container-slug">
+                  <Flex justifyContent="center" alignItems="center" mt={5}>
+                    <Button
+                      className="product-details-add-card-btn"
+                      mr={10}
+                      onClick={() => onAdd(product, qty)}
+                    >
+                      {" "}
+                      <RiShoppingCartLine className="footer-btn-shop" />
+                      ADD TO CART
+                    </Button>
+                    <Button
+                      className="product-details-buy-now-btn"
+                      onClick={handleBuyNow}
+                    >
+                      <TbPaperBag className="footer-btn-shop" />
+                      BUY NOW
+                    </Button>
+                  </Flex>
+                </Box>
               </Stack>
             </Box>
           </Flex>

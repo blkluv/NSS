@@ -59,12 +59,12 @@ const HeroBanner = ({ heroBanner }) => {
               />
             </Box>
           </Stack>
-          <Box className="hero-banner-button-box" mb={6} mt={5}>
+          <Box className="hero-banner-button-box" mb={6} mt={5} ml={10}>
             <Button className="hero-banner-button" size={["md", "lg", "lg"]}>
               Click Me
             </Button>
           </Box>
-          <Box className="hero-banner-desc-box" mt={["-1.5rem", "auto"]}>
+          <Box className="hero-banner-desc-box" mt={["-3rem", "auto"]}>
             <Box className="hero-banner-desc-up-text-box">
               <Text
                 className="hero-banner-desc-up-text"
