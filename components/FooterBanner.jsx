@@ -21,13 +21,13 @@ const FooterBanner = ({ footerBanner }) => {
             </Text>
             <Text
               className="footer-banner-desc-largeText1"
-              fontSize={["4rem", "6.5rem", "7rem"]}
+              fontSize={["4.2rem", "6.5rem", "7rem"]}
             >
               {footerBanner.largeText1}
             </Text>
             <Text
               className="footer-banner-desc-largeText2"
-              fontSize={["4rem", "6.5rem", "7rem"]}
+              fontSize={["4.2rem", "6.5rem", "7rem"]}
               mt={["-2.5rem"]}
             >
               {footerBanner.largeText2}
@@ -75,15 +75,15 @@ const FooterBanner = ({ footerBanner }) => {
             >
               {footerBanner.desc}
             </Text>
-            <Link href={`/product/${footerBanner.product}`}>
-              <Button
-                className="footer-banner-product-btn"
-                mt={5}
-                size={["md", "lg", "lg"]}
-              >
-                {footerBanner.buttonText}{" "}
-              </Button>
-            </Link>
+            {/* <Link href={`/product/${footerBanner.product}`}> */}
+            <Button
+              className="footer-banner-product-btn"
+              mt={5}
+              size={["md", "lg", "lg"]}
+            >
+              {footerBanner.buttonText}{" "}
+            </Button>
+            {/* </Link> */}
           </Box>
           {/* <Box>
             <img
@@ -94,7 +94,7 @@ const FooterBanner = ({ footerBanner }) => {
             />
           </Box> */}
           <Box
-            className="hero-banner-image-box"
+            className="hero-banner-footer-image-box"
             w={["12rem", "20rem", "30rem"]}
             h={["12rem", "20rem", "30rem"]}
           >

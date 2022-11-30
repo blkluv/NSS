@@ -1,5 +1,6 @@
 import React from "react";
-import Link from "next/link";
+// import Link from "next/link";
+// import Image from "next/image";
 
 //Import IMAGES from client
 import { urlFor } from "../lib/client";
@@ -21,13 +22,13 @@ const HeroBanner = ({ heroBanner }) => {
               <Box className="hero-banner-titles-box">
                 <Text
                   className="hero-banner-up-title"
-                  fontSize={["0.8rem", "1rem", "2rem"]}
+                  fontSize={["1.2rem", "1rem", "2rem"]}
                 >
                   -{heroBanner.smallText}-
                 </Text>
                 <Text
                   className="hero-banner-main-title"
-                  fontSize={["2.8rem", "3.5rem", "5rem"]}
+                  fontSize={["3rem", "3.5rem", "5rem"]}
                 >
                   {" "}
                   {heroBanner.midText}
@@ -58,7 +59,7 @@ const HeroBanner = ({ heroBanner }) => {
               />
             </Box>
           </Stack>
-          <Box className="hero-banner-button-box" mb={6}>
+          <Box className="hero-banner-button-box" mb={6} mt={5}>
             <Button className="hero-banner-button" size={["md", "lg", "lg"]}>
               Click Me
             </Button>

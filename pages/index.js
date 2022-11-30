@@ -26,13 +26,13 @@ const Home = ({ products, bannerData, footerBannerData }) => (
           >
             <Text
               className="notable-collection-title"
-              fontSize={["2.2rem", "3.2rem", "5.3rem"]}
+              fontSize={["2.5rem", "3.2rem", "5.3rem"]}
             >
               Notable Collection
             </Text>
             <Text
               className="notable-collection-sub-title"
-              fontSize={["1rem", "1.9rem", "3rem"]}
+              fontSize={["1.5rem", "1.9rem", "3rem"]}
             >
               Latest nft drop
             </Text>

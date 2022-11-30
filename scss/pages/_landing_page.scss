@@ -1,5 +1,7 @@
 //-------------- SECTIONS -----------
-
+// .home-section {
+//     background-color: #F5D491;
+// }
 
 
 
@@ -7,13 +9,15 @@
 
 //-------------- TITLES SECTION -----------
 .notable-collection-title {
-    font-family: var( --ft-main-text);
+    // background-color: aqua;
+    font-family: var( --ft-main-title);
     font-weight: 400;
     white-space: nowrap;
 }
 
 .notable-collection-sub-title {
-    font-family: var( --ft-main-text);
+    // background-color: red;
+    font-family: var( --ft-main-title);
     font-weight: 400;
     white-space: nowrap;
     text-transform: uppercase;
