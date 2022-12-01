@@ -22,7 +22,7 @@ const HeroBanner = ({ heroBanner }) => {
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0.25 }}
+          viewport={{ once: true }}
         >
           <Box
             className="hero-banner-container"
