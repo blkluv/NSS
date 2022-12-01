@@ -51,7 +51,7 @@ const HeroBanner = ({ heroBanner }) => {
                   </motion.h2>
                 </Box>
                 <Box className="hero-banner-huge-title-box">
-                  <motion.h1 variants={textVariant1(1.1)}>
+                  <motion.h1 variants={textVariant1(1.2)}>
                     <Text
                       className="hero-banner-huge-title"
                       fontSize={["7.5rem", "9rem", "15rem"]}
@@ -71,7 +71,7 @@ const HeroBanner = ({ heroBanner }) => {
                 w={["10.2rem", "15rem", "20rem"]}
                 h={["10.2rem", "15rem", "20rem"]}
               >
-                <motion.div variants={slideIn("right", "tween", 0.2, 1)}>
+                <motion.div variants={slideIn("right", "tween", 0.1, 1)}>
                   <img
                     src={urlFor(heroBanner.image)}
                     alt="banner Image"
@@ -86,24 +86,26 @@ const HeroBanner = ({ heroBanner }) => {
               </Button>
             </Box>
             <Box className="hero-banner-desc-box" mt={["-3rem", "auto"]}>
-              <Box className="hero-banner-desc-up-text-box">
-                <Text
-                  className="hero-banner-desc-up-text"
-                  fontSize={["0.7rem", "0.78rem", "2rem"]}
-                >
-                  Description
-                </Text>
-              </Box>
-              <Box className="hero-banner-desc-main-text-box">
-                <Text
-                  className="hero-banner-desc-main-text"
-                  fontSize={["0.6rem", "0.7rem", "2rem"]}
-                  ml={["10rem", "12rem", "15rem"]}
-                  lineHeight={["0.8rem", "1rem", "2rem"]}
-                >
-                  {heroBanner.desc}
-                </Text>
-              </Box>
+              <motion.div variants={slideIn("right", "tween", 0.4, 1)}>
+                <Box className="hero-banner-desc-up-text-box">
+                  <Text
+                    className="hero-banner-desc-up-text"
+                    fontSize={["0.7rem", "0.78rem", "2rem"]}
+                  >
+                    Description
+                  </Text>
+                </Box>
+                <Box className="hero-banner-desc-main-text-box">
+                  <Text
+                    className="hero-banner-desc-main-text"
+                    fontSize={["0.6rem", "0.7rem", "2rem"]}
+                    ml={["10rem", "12rem", "15rem"]}
+                    lineHeight={["0.8rem", "1rem", "2rem"]}
+                  >
+                    {heroBanner.desc}
+                  </Text>
+                </Box>
+              </motion.div>
             </Box>
           </Box>
         </motion.div>

@@ -62,7 +62,7 @@ const ProductDetails = ({ product, products }) => {
                     <Box>
                       <Text
                         className="product-details-artist-name"
-                        fontSize={["2rem", "6.5rem", "7rem"]}
+                        fontSize={["2rem", "4rem", "7rem"]}
                       >
                         {artistName}
                       </Text>
@@ -76,7 +76,7 @@ const ProductDetails = ({ product, products }) => {
                 <Box className="product-details-product-name-box">
                   <Text
                     className="product-details-product-name"
-                    fontSize={["2.5rem", "6.5rem", "7rem"]}
+                    fontSize={["2.5rem", "4rem", "7rem"]}
                   >
                     {itemName}
                   </Text>

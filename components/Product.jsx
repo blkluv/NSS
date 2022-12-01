@@ -20,7 +20,7 @@ const Product = ({ product: { image, slug } }) => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          <motion.div variants={slideIn("down", "tween", 0.1, 1.5)}>
+          <motion.div variants={slideIn("down", "tween", 0.9, 1.5)}>
             <Link href={`/product/${slug.current}`}>
               <Box className="product-card">
                 <Stack direction="column">
