@@ -1,5 +1,8 @@
 import React from "react";
 
+
+
+
 //IMPORT client api from internal folder
 import { client } from "../lib/client";
 
@@ -7,6 +10,7 @@ import { client } from "../lib/client";
 import { Product, FooterBanner, HeroBanner } from "../components";
 // IMPORT CHAKRA tools
 import { Box, Stack, Text } from "@chakra-ui/react";
+
 
 const Home = ({ products, bannerData, footerBannerData }) => (
   <>
@@ -37,18 +41,26 @@ const Home = ({ products, bannerData, footerBannerData }) => (
               Latest nft drop
             </Text>
           </Stack>
+          
           <Box className="home-main-section">
             {products?.map((product) => (
               <Product key={product._id} product={product} />
             ))}
           </Box>
+        
         </Box>
       </section>
       <section>
+      <motion.div
+           variants={slideIn}
+           initial="hidden"
+           whileInView="show"
+          >
         <FooterBanner
           footerBanner={footerBannerData.length && footerBannerData[0]}
         />
         {console.log(footerBannerData)}
+        </motion.div>
       </section>
     </section>
   </>

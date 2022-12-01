@@ -1,10 +1,14 @@
 import React from "react";
 import Link from "next/link";
+
+//IMPORT ICON
 import { RiShoppingCartLine } from "react-icons/ri";
 
+//IMPORT CART + CONTEXT
 import { Cart } from "./";
 import { useStateContext } from "../context/StateContext";
 
+//IMPORT CHAKRA TOOLS
 import { Spacer, Box, Flex, Text } from "@chakra-ui/react";
 
 const Navbar = () => {
