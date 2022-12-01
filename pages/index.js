@@ -51,16 +51,12 @@ const Home = ({ products, bannerData, footerBannerData }) => (
         </Box>
       </section>
       <section>
-      <motion.div
-           variants={slideIn}
-           initial="hidden"
-           whileInView="show"
-          >
+     
         <FooterBanner
           footerBanner={footerBannerData.length && footerBannerData[0]}
         />
         {console.log(footerBannerData)}
-        </motion.div>
+    
       </section>
     </section>
   </>
