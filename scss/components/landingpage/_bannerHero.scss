@@ -44,23 +44,29 @@
 	}
 }
 
-// .hero-banner-section {
-//     min-height:30rem;
-//     background-color: var(--clr-bg-orange);
-//     border-radius: 15px;
-// }
-
-.hero-banner-container {
-    // background-color: aqua;
+.hero-banner-section {
+    min-height:30rem;
     background-color: var(--clr-bg-orange);
     border-bottom-left-radius: 50px 20px;
     border-bottom-right-radius: 50px 20px;
     width: 100%;
-    height:fit-content;
-    position: relative;
-    z-index: -1;
-    // box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    z-index: -2;
+    
+}
+
+.hero-banner-container {
+    // background-color: aqua;
+    // background-color: cyan;
+    // border-bottom-left-radius: 50px 20px;
+    // border-bottom-right-radius: 50px 20px;
+    // width: 100%;
+    height:fit-content;
+    // position: relative;
+    // width: 90%;
+    
+    // box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    // box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
 .hero-banner-titles-box {

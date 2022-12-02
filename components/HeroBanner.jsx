@@ -9,10 +9,23 @@ import { motion } from "framer-motion";
 import { urlFor } from "../lib/client";
 
 // IMPORT CHAKRA tools
-import { Box, Stack, Text, Button, Spacer, VStack } from "@chakra-ui/react";
+import {
+  Container,
+  Box,
+  Stack,
+  Text,
+  Button,
+  Spacer,
+  VStack,
+} from "@chakra-ui/react";
 
 //IMPORT MOTION TOOLS
-import { slideIn, staggerContainer, textVariant1 } from "../utils/motion";
+import {
+  fadeIn,
+  slideIn,
+  staggerContainer,
+  textVariant1,
+} from "../utils/motion";
 
 const HeroBanner = ({ heroBanner }) => {
   return (
@@ -27,7 +40,8 @@ const HeroBanner = ({ heroBanner }) => {
           <Box
             className="hero-banner-container"
             py={4}
-            px={["0.5rem", "2rem", "5rem"]}
+            px={["0.5rem", "2rem", "2rem"]}
+            mx={["0", "0", "10rem"]}
           >
             <Stack direction="row">
               <VStack>
