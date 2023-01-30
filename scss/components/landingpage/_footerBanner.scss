@@ -37,8 +37,7 @@
     font-family: var(--ft-spaceGro);
     color: var(--clr-grey-shadow);
     font-size: var(--font-size-22);
-    text-transform: uppercase;
-    
+    text-transform: uppercase;   
 }
 
 .footer-banner-desc-largeText1 {
@@ -74,34 +73,41 @@
 
 //RIGHT TEXTS
 .footer-banner-desc-smallText {
-    background-color: purple;
+    // background-color: purple;
     font-family: var(--ft-comi);
+    font-size: var(--font-size-15);
+    color: var(--clr-grey-bright);
     text-transform: uppercase;
      color: var(--clr-txt-grey-70);
 }
 
 .footer-banner-desc-midText {
-    background-color: purple;
+    // background-color: purple;
+   
     font-family: var(--ft-comi);
+    color: var(--clr-pink);
+    font-size: var(--font-size-15);
     text-transform: uppercase;
-     color: var(--clr-txt-grey-70);
 }
 
 .footer-banner-desc-desc {
     // background-color: cornflowerblue;
-    font-family: var(--ft-main-text);
-   
+    margin-top: 1rem ;
+    font-family: var(--ft-comi);
+    font-size: var(--font-size-15);
+    color: var(--clr-grey-bright);
 }
 
 
 //-------------- BTN SECTION -----------
 .footer-banner-product-btn {
-    border: 1px solid var(--clr-btn-contact-dark);
+  
     border-radius: 0px !important;
-    background-color: var(--clr-bg-white) !important;
-    font-family: var( --ft-main-title);
-    text-transform: uppercase;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+	background-color: var(--clr-btn-bg) !important;
+	color: var(--clr-btn-txt) !important;
+	border: 1px solid var(  --clr-btn-stroke);
+	padding: 2px 15px 2px 15px !important;
+	margin-top: 1rem !important;
 }
 
 //-------------- IMG SECTION -----------
