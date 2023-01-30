@@ -2,14 +2,15 @@ import React from "react";
 import Link from "next/link";
 
 //IMPORT ICON
-import { RiShoppingCartLine } from "react-icons/ri";
+import { HiOutlineShoppingCart } from "react-icons/hi";
+import { IoCubeOutline } from "react-icons/io5";
 
 //IMPORT CART + CONTEXT
 import { Cart } from "./";
 import { useStateContext } from "../context/StateContext";
 
 //IMPORT CHAKRA TOOLS
-import { Spacer, Box, Flex, Text } from "@chakra-ui/react";
+import { HStack, Spacer, Box, Flex, Text } from "@chakra-ui/react";
 
 const Navbar = () => {
   const { showCart, setShowCart, totalQuantities } = useStateContext();
@@ -19,9 +20,12 @@ const Navbar = () => {
       <Box height={10}>
         <Flex>
           <Box m={2}>
-            <Text className="navbar-logo-title">
-              <Link href="/">MTNlabs - DIGITART SHOP</Link>
-            </Text>
+            <HStack>
+              <IoCubeOutline size="20px" />
+              <Text className="navbar-logo-title">
+                <Link href="/">[metanodes.lab]</Link>
+              </Text>
+            </HStack>
           </Box>
           <Spacer />
           <Box m={2}>
@@ -30,7 +34,7 @@ const Navbar = () => {
               className="cart-icon"
               onClick={() => setShowCart(true)}
             >
-              <RiShoppingCartLine />
+              <HiOutlineShoppingCart />
               <span className="cart-item-qty">{totalQuantities}</span>
             </button>
             {showCart && <Cart />}

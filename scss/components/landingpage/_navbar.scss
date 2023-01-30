@@ -1,13 +1,14 @@
 //-------------- SECTIONS -----------
 
 .cart-icon{
-    font-size: 25px;
-    color: gray;
+    font-size: 22px;
+    color: var(--clr-grey-shadow);
     cursor: pointer;
     position: relative;
     transition: transform .4s ease;
     border: none;
     background-color: transparent;
+    margin-top: 2px;
   }
 
 
@@ -21,25 +22,28 @@
 
 .cart-item-qty{
     position: absolute;
+    
     right: -8px;
     font-size: 12px;
-    color: #eee;
-    background-color: #f02d34;
+    color: var(--clr-pink);
+    background-color: var(--clr-grey-dark);
+    font-family: var(--ft-asap);
     width: 18px;
     height: 18px;
     border-radius: 50%;
     text-align: center;
-    font-weight: 600;
+    font-weight: 400;
   }
 
 
 //-------------- TITLES SECTION -----------
 
   .navbar-logo-title {
-    font-family: var( --ft-main-title);
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 2px;
+    font-family: var( --ft-spaceGro);
+    text-transform:lowercase;
+    font-weight: 100;
     white-space: nowrap;
-    color: var(--clr-txt-blk-50);
+    color: var(--clr-grey-bright);
+    font-size: var(--font-size-13);
   }
+

@@ -45,143 +45,81 @@
 }
 
 .hero-banner-section {
-    min-height:30rem;
-    background-color: var(--clr-bg-orange);
-    border-bottom-left-radius: 50px 20px;
-    border-bottom-right-radius: 50px 20px;
+    min-height:50rem;
+    // background-color: blue;
     width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-    z-index: -2;
-    
+    // z-index: -2;
 }
 
-.hero-banner-container {
-    // background-color: aqua;
-    // background-color: cyan;
-    // border-bottom-left-radius: 50px 20px;
-    // border-bottom-right-radius: 50px 20px;
-    // width: 100%;
-    height:fit-content;
-    // position: relative;
-    // width: 90%;
-    
-    // box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-    // box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+.section-img {
+	margin-top: -3rem;
 }
 
-.hero-banner-titles-box {
-    // background-color: blueviolet;
-    z-index: 2;
-}
-
-.hero-banner-huge-title-box {
-    // background-color: rosybrown;
-    z-index: 0;
-    margin-top: -3rem !important;
-    
-}
-
-.hero-banner-image-box {
-    position: absolute;
-    top: 2.9%;
-    right:2%;
-    z-index: 1;
-    background-color: transparent;
-   
-
-    img {
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    position: absolute;
-    top: 4%;
-    right:2%;
-    z-index: 1;
-    // animation: float-horizontal 5s ease-in-out infinite;
-    animation: scale-soft 10s ease-in-out infinite;
-    }
+.hero-banner-image {
+	max-width: 150px;
 }
 
 
-// .hero-banner-button-box {
-//     background-color: yellow;
-// }
-
-.hero-banner-desc-box {
-    // background-color: green;
-    z-index: 950;
-    text-align: right;
-}
-
-// .hero-banner-desc-up-text-box {
-//     background-color: maroon;
-    
-// }
-
-// .hero-banner-desc-main-text-box {
-//     background-color: khaki;
-   
-// }
 
 
 
 
 //-------------- TITLES SECTION -----------
-.hero-banner-up-title {
-    // background-color: yellow;
-    font-family: var(--ft-main-text);
-    // text-transform: uppercase;
+.hero_banner-huge-title {
+    font-family: var(--ft-spaceGro);
+    font-size: var(--font-size-150);
+    font-weight: 100;
+    color: var( --clr-grey-bright);
+    margin-left: 0.5rem;
+}
+
+.hero_banner-desc {
+    // background-color: aquamarine;
+    font-family: var(--ft-comi);
+    font-size: var(--font-size-17);
     font-weight: 200;
-    // letter-spacing: 1px;
-    color: var(--color-palette-04);
+    color: var( --clr-pink);
+    margin-left: 1rem;
+    width: 10rem;
+    margin-top: -2.5rem;
+    height: fit-content;	
 }
 
-.hero-banner-main-title{
-    // background-color: purple;
-    font-family: var( --ft-main-title);
-    // text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 2px;
-    white-space: nowrap;
-    color: var(--color-outer-space);
+.hero_banner-img-desc {
+	font-family: var(--ft-comi);
+    font-size: var(--font-size-12);
+	font-weight: 200;
+	margin-top: -0.5rem;
 }
 
-.hero-banner-huge-title {
-    // background-color: cadetblue;
-    font-family: var(--ft-main-text);
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 0.125rem;
-    white-space: nowrap;
-    font-style: oblique;
-    // color: var(--clr-txt-grey-50);
-    color: var( --color-coconut);
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: var(--color-outer-space);
+.a-letter {
+    // background-color: pink;
+    margin-top: -6.2rem;
+    margin-left: 4rem;
+    height: fit-content;
 }
 
-.hero-banner-desc-up-text {
-    // background-color: cyan;
-    font-family: var(--ft-main-text);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--clr-txt-grey-50);
+.pe-letter {
+    margin-top: -4.2rem;
+    height: fit-content;
 }
-
-.hero-banner-desc-main-text {
-    // background-color: cornflowerblue;
-     font-family: var(--ft-main-text);
-     color: var(--clr-txt-grey-50);
-     padding-left: 2rem;
-     
-}
-
 
 //-------------- BUTTON -----------
+.read-me-btn {
+	border-radius: 0px !important;
+	background-color: var(--clr-btn-bg) !important;
+	color: var(--clr-btn-txt) !important;
+	border: 1px solid var(  --clr-btn-stroke);
+	padding: 0 40px 0 40px !important;
+	margin-top: -2rem !important;
+}
 
-.hero-banner-button {
-    border: 1px solid var(--clr-btn-contact-dark);
-    border-radius: 0px !important;
-    background-color: var(--clr-bg-white) !important;
-    font-family: var( --ft-main-title);
-    text-transform: uppercase;
+
+
+//-------------- OTHER -----------
+.hero_banner-icon-enter {
+    color: var(--clr-grey-dark);
+    rotate: 90deg;
+    margin-top: 7.9rem;
+    margin-left: -5rem;
 }
