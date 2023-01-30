@@ -1,55 +1,83 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
+import $ from 'jquery';
 //IMPORT MOTION
 import { motion } from "framer-motion";
-
-
-
+import Link from "next/link";
 //IMPORT client api from internal folder
 import { client } from "../lib/client";
 
 //IMPORT Internal components
-import {  FooterBanner, TopArt, Artwork} from "../components";
+import { FooterBanner, TopArt, Artwork } from "../components";
 // IMPORT CHAKRA tools
-import { Box, Stack, Text } from "@chakra-ui/react";
+import { Flex, Box, Stack, Text } from "@chakra-ui/react";
 
 //IMPORT MOTION TOOLS
 // import { staggerContainer, textVariant1 } from "../utils/motion";
 
+const Home = ({ footerBannerData, headArtData, artworks }) => {
+  const [isMobile, setIsMobile] = useState(false); 
 
-const Home = ({  products, bannerData, footerBannerData, headArtData, artworks }) => (
+  useEffect(() => {
+    const handleResize = () => {
+      if ($(window).width() <= 470) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+  
+    handleResize();
+    window.addEventListener("resize", handleResize);
+  
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  return (
   <>
-    <section className="home-section">
-      <section className="home-banner-section">
-        <Box>
-          <TopArt headArt={headArtData.length && headArtData[0]} />
-        </Box>
-      </section>
-      <section >
-      <Box mb={["10rem", "10rem", "15rem"]} mt={["4rem", "7rem", "7rem"]}>
+ {isMobile ? (
+   <section className="home-section">
+   <section>
+     <Box>
+       <TopArt headArt={headArtData.length && headArtData[0]} />
+     </Box>
+   </section>
+
+   <section className="nftDrop-section">
+     <Box>
+       <Text className="nftDrop-title">[Latest NFT Drop]</Text>
+     </Box>
+     <Box>
+       <Box className="nftDrop-artwork-div">
+         {artworks?.map((artwork) => (
+           <Artwork key={artwork._id} artwork={artwork} />
+         ))}
+       </Box>
+     </Box>
+   </section>
+
+   <section>
+     <FooterBanner
+       footerBanner={footerBannerData.length && footerBannerData[0]}
+     />
+     {console.log(footerBannerData)}
+   </section>
+ </section>
         
-          <Text
-            className="notable-collection-title"
-          >
-            [Latest NFT Drop]
-          </Text>
-        
-        <Box >
-          {artworks?.map((artwork) => (
-            <Artwork key={artwork._id} artwork={artwork} />
-          ))}
-        </Box>
-      </Box>
-      </section>
-      <section>
-        <FooterBanner
-          footerBanner={footerBannerData.length && footerBannerData[0]}
-        />
-        {console.log(footerBannerData)}
-    
-      </section>
-    </section>
+      ) :(
+        <div className='prompt-not-smartphone-section'>
+          <div className='prompt-not-smartphone-div'>
+        <p className='prompt-not-smartphone'>
+          This website has been designed for mobile-only.
+          <br/>
+          Please use a smartphone to view the content.</p>
+          </div>
+          </div>
+    )}
   </>
 );
+};
 
 export const getServerSideProps = async () => {
   const query = '*[_type == "product"]';
@@ -67,9 +95,8 @@ export const getServerSideProps = async () => {
   const footerBannerQuery = '*[_type == "footerBanner"]';
   const footerBannerData = await client.fetch(footerBannerQuery);
 
-
   return {
-    props: { products,  bannerData, footerBannerData, headArtData, artworks },
+    props: { products, bannerData, footerBannerData, headArtData, artworks },
   };
 };
 

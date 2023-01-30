@@ -1,25 +1,20 @@
 //-------------- SECTIONS -----------
-// .home-section {
-//     background-color: #F5D491;
-// }
+.prompt-not-smartphone-section {
+    margin-top: 20rem ;
+    margin-left: 3rem;
+
+    
+}
+
+
 
 
 
 
 
 //-------------- TITLES SECTION -----------
-.notable-collection-title {
-    // background-color: aqua;
-    font-family: var( --ft-main-title);
-    font-weight: 400;
-    white-space: nowrap;
+.prompt-not-smartphone {
+    font-family: var(--ft-shoulder);
+    font-size: var(--font-size-30);
 }
 
-.notable-collection-sub-title {
-    // background-color: red;
-    font-family: var( --ft-main-title);
-    font-weight: 400;
-    white-space: nowrap;
-    text-transform: uppercase;
-    color: var(--clr-txt-grey-70);
-}

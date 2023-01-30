@@ -75,7 +75,7 @@ const topArt = ({ headArt }) => {
               <Text className="hero_banner-huge-title pe-letter">
                 {headArt.largeText3}
               </Text>
-              <Button className="read-me-btn">{headArt.buttonText}</Button>
+              <button className="read-me-btn">{headArt.buttonText}</button>
             </VStack>
           </Box>
         </Flex>

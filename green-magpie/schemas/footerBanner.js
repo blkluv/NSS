@@ -47,6 +47,21 @@ export default {
             type: 'string',
         },
         {
+            name: 'largeTitle1',
+            title: 'LargeText1',
+            type: 'string',
+        },
+        {
+            name: 'largeTitle2',
+            title: 'LargeText2',
+            type: 'string',
+        },
+        {
+            name: 'largeTitle3',
+            title: 'LargeText3',
+            type: 'string',
+        },
+        {
             name: 'discount',
             title: 'Discount',
             type: 'string',

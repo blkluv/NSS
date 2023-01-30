@@ -3,23 +3,21 @@ import Link from "next/link";
 import { urlFor } from "../lib/client";
 
 // IMPORT CHAKRA tools
-import { Box, Stack } from "@chakra-ui/react";
+import { Text, Box, Stack } from "@chakra-ui/react";
+import artwork from "../green-magpie/schemas/artwork";
 
 const Artwork = ({ artwork: { image, slug } }) => {
   return (
     <>
       <Box>
         <Link href={`/artwork/${slug.current}`}>
-          <Box className="product-card">
+          <Box>
             <Stack direction="column">
-              <Box
-                w={["10.2rem", "15rem", "20rem"]}
-                h={["10.2rem", "15rem", "20rem"]}
-              >
+              <Box>
                 <img
                   src={urlFor(image && image[0])}
                   alt="Product Image"
-                  className="product-image"
+                  className="nftDrop-image"
                 />
               </Box>
             </Stack>

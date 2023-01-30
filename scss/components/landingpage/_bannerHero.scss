@@ -45,9 +45,10 @@
 }
 
 .hero-banner-section {
-    min-height:50rem;
-    // background-color: blue;
+   
+   
     width: 100%;
+	margin-bottom: 4rem;
     // z-index: -2;
 }
 
@@ -102,6 +103,7 @@
 .pe-letter {
     margin-top: -4.2rem;
     height: fit-content;
+
 }
 
 //-------------- BUTTON -----------
@@ -110,7 +112,7 @@
 	background-color: var(--clr-btn-bg) !important;
 	color: var(--clr-btn-txt) !important;
 	border: 1px solid var(  --clr-btn-stroke);
-	padding: 0 40px 0 40px !important;
+	padding: 2px 30px 2px 30px !important;
 	margin-top: -2rem !important;
 }
 
