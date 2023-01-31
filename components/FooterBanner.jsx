@@ -5,7 +5,7 @@ import Link from "next/link";
 import { urlFor } from "../lib/client";
 
 // IMPORT CHAKRA tools
-import { Box, Flex, Stack, Text, Button, Spacer } from "@chakra-ui/react";
+import { Box, Flex, Stack, Text, Spacer } from "@chakra-ui/react";
 //IMPORT ICON
 import { BsArrow90DegRight } from "react-icons/bs";
 
@@ -17,7 +17,7 @@ const FooterBanner = ({ footerBanner }) => {
           <Box>
             <Flex>
               <Box>
-                <Text className="hero_banner-huge-title">
+                <Text className="hero_banner-huge-title exp-letter">
                   {footerBanner.largeTitle1}
                 </Text>
               </Box>
@@ -86,9 +86,11 @@ const FooterBanner = ({ footerBanner }) => {
           <Box className="footer-banner-desc-right">
             <Text className="footer-banner-desc-desc">{footerBanner.desc}</Text>
             {/* <Link href={`/product/${footerBanner.product}`}> */}
-            <button className="footer-banner-product-btn">
-              {footerBanner.buttonText}{" "}
-            </button>
+            <Box className="footer-banner-product-btn-div">
+              <button className="footer-banner-product-btn">
+                {footerBanner.buttonText}{" "}
+              </button>
+            </Box>
             {/* </Link> */}
           </Box>
         </Box>

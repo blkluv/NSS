@@ -1,21 +1,27 @@
-import React, { useEffect, useState } from 'react';
-import $ from 'jquery';
+import React, { useEffect, useState } from "react";
+import $ from "jquery";
+import Image from "next/image";
 //IMPORT MOTION
-import { motion } from "framer-motion";
-import Link from "next/link";
+// import { motion } from "framer-motion";
+// import Link from "next/link";
 //IMPORT client api from internal folder
 import { client } from "../lib/client";
 
 //IMPORT Internal components
 import { FooterBanner, TopArt, Artwork } from "../components";
 // IMPORT CHAKRA tools
-import { Flex, Box, Stack, Text } from "@chakra-ui/react";
+import { Flex, Box, VStack, Text, Container } from "@chakra-ui/react";
+
+import { BiGhost } from "react-icons/bi";
 
 //IMPORT MOTION TOOLS
 // import { staggerContainer, textVariant1 } from "../utils/motion";
 
+//Import IMAGES
+import ShopNodeQR from "../dist/img/MetaNodesLab-stripe.png";
+
 const Home = ({ footerBannerData, headArtData, artworks }) => {
-  const [isMobile, setIsMobile] = useState(false); 
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,58 +31,87 @@ const Home = ({ footerBannerData, headArtData, artworks }) => {
         setIsMobile(false);
       }
     };
-  
+
     handleResize();
     window.addEventListener("resize", handleResize);
-  
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
-  <>
- {isMobile ? (
-   <section className="home-section">
-   <section>
-     <Box>
-       <TopArt headArt={headArtData.length && headArtData[0]} />
-     </Box>
-   </section>
+    <>
+      {isMobile ? (
+        <section className="home-section">
+          <section>
+            <Box>
+              <TopArt headArt={headArtData.length && headArtData[0]} />
+            </Box>
+          </section>
 
-   <section className="nftDrop-section">
-     <Box>
-       <Text className="nftDrop-title">[Latest NFT Drop]</Text>
-     </Box>
-     <Box>
-       <Box className="nftDrop-artwork-div">
-         {artworks?.map((artwork) => (
-           <Artwork key={artwork._id} artwork={artwork} />
-         ))}
-       </Box>
-     </Box>
-   </section>
+          <section className="nftDrop-section">
+            <Box>
+              <Text className="nftDrop-title">[Latest NFT Drop]</Text>
+            </Box>
+            <Box>
+              <VStack className="nftDrop-artist-name-and-number-div">
+                <Box className="nftDrop-artist-name-box">
+                  <Text className="nftDrop-artist-name-text">VINAY</Text>
+                </Box>
+                <Box className="nftDrop-artist-number-box">
+                  <Text className="nftDrop-artist-number">01</Text>
+                </Box>
+              </VStack>
 
-   <section>
-     <FooterBanner
-       footerBanner={footerBannerData.length && footerBannerData[0]}
-     />
-     {console.log(footerBannerData)}
-   </section>
- </section>
-        
-      ) :(
-        <div className='prompt-not-smartphone-section'>
-          <div className='prompt-not-smartphone-div'>
-        <p className='prompt-not-smartphone'>
-          This website has been designed for mobile-only.
-          <br/>
-          Please use a smartphone to view the content.</p>
-          </div>
-          </div>
-    )}
-  </>
-);
+              {/* <Flex justifyContent="center"> */}
+              <Box className="nftDrop-artwork-div">
+                {artworks?.map((artwork) => (
+                  <Artwork key={artwork._id} artwork={artwork} />
+                ))}
+              </Box>
+              {/* </Flex> */}
+            </Box>
+          </section>
+
+          <section>
+            <FooterBanner
+              footerBanner={footerBannerData.length && footerBannerData[0]}
+            />
+            {console.log(footerBannerData)}
+          </section>
+        </section>
+      ) : (
+        <Box className="prompt-not-smartphone-section">
+          <Flex
+            justifyContent="center"
+            alignItems="center"
+            className="prompt-not-smartphone-div"
+          >
+            <Box mr="4rem">
+              <BiGhost size="70px" className="prompt-not-smartphone" />
+            </Box>
+            <Box className="prompt-not-smartphone">
+              This website has been designed as mobile-only.
+              <br />
+              Please use a smartphone to view the content.
+            </Box>
+          </Flex>
+          <Flex justifyContent="center" alignItems="center" mt="4rem">
+            <Box>
+              <Image
+                width="200px"
+                height="200px"
+                objectFit="cover"
+                src={ShopNodeQR}
+                alt="qr-code"
+              />
+            </Box>
+          </Flex>
+        </Box>
+      )}
+    </>
+  );
 };
 
 export const getServerSideProps = async () => {

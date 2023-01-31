@@ -47,15 +47,20 @@
 .hero-banner-section {
     width: 100%;
 	margin-bottom: 4rem;
+	@media (min-width: 412px) {
+		margin-left: 2rem;
+		}
     // z-index: -2;
 }
 
 .section-img {
 	margin-top: -3rem;
+	// margin-left: 2rem;
 }
 
 .hero-banner-image {
 	max-width: 150px;
+	margin-left: 1rem;
 }
 
 
@@ -70,6 +75,9 @@
     font-weight: 100;
     color: var( --clr-grey-bright);
     margin-left: 0.5rem;
+	@media (min-width: 437px) {
+		font-size: var(--font-size-197);
+		}
 }
 
 .hero_banner-desc {
@@ -81,7 +89,10 @@
     margin-left: 1rem;
     width: 10rem;
     margin-top: -2.5rem;
-    height: fit-content;	
+    height: fit-content;
+	@media (min-width: 437px) {
+		font-size: var(--font-size-20);
+		}	
 }
 
 .hero_banner-img-desc {

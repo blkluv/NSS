@@ -3,6 +3,25 @@
 GLOBAL STYLES
 ===============
 */
+//----- JQUERIES ----------
+// Target iPhone SE and smaller
+@media (max-width: 320px) {
+}
+
+// Target iPhone 6 and 6 Plus
+@media (min-width: 375px) and (max-width: 414px) {
+// Styles here
+}
+
+// Target iPhone X and larger
+@media (min-width: 375px) and (max-width: 812px) {
+// Styles here
+}
+
+// Target all Android devices with a screen width of 360px or smaller
+@media (max-width: 360px) {
+// Styles here
+}
 
 /*----------------------------- SCROLLBAR ------------------------*/
 

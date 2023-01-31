@@ -48,14 +48,45 @@
 
 .nftDrop-section {
 // background-color: pink;
+margin-bottom: 3rem;
+@media (min-width: 412px) {
+	margin-left: 2rem;
+	}
 }
+
+.nftDrop-artist-name-and-number-div {
+	// background-color: aqua;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 30%;
+	transform: translateY(-50%);
+	margin: 8rem 2.5rem 0 0;
+	z-index: 0;
+	//Target iPhone SE and smaller
+    @media (max-width: 380px) {
+		display: none;
+	}
+	@media (min-width: 412px) {
+		margin-right: 0.5rem;
+		}
+}
+
+
 
 .nftDrop-artwork-div {
     margin-top: 2rem;
     margin-left: 1rem;
+	z-index: 1;
+	position: relative;
+
+	@media (max-width: 380px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	  }
 }
-
-
 
 
 
@@ -69,6 +100,32 @@
     margin-left: 1rem;
     width: 10rem;
    
+}
+
+.nftDrop-artist-name-text {
+	display: block;
+	font-family: var(--ft-comi);
+	font-size: var(--font-size-42);
+	color: var(--clr-pink);
+	transform: rotate(90deg);
+	//Target iPhone SE and smaller
+    @media (max-width: 380px) {
+		display: none;
+	}
+}
+
+.nftDrop-artist-number {
+	display: block;
+	font-family: var( --ft-spaceGro);
+	font-size: var(--font-size-150);
+	font-weight: 600;
+	color: var(--clr-pink);
+	transform: rotate(90deg);
+	margin-top: 3rem;
+	//Target iPhone SE and smaller
+    @media (max-width: 380px) {
+		display: none;
+	}
 }
 
 //-------------- BUTTON -----------
