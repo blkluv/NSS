@@ -30,8 +30,10 @@ const ArtworkDetails = ({ artwork, artworks }) => {
     image,
     artistName,
     largenumber,
+    artworkName,
     cat,
     price,
+    blockDesc,
     desc,
     shortDesc,
     buttonAdd,
@@ -46,13 +48,67 @@ const ArtworkDetails = ({ artwork, artworks }) => {
   return (
     <>
       <section className="product-details-section">
-        <Box>
-          <img
-            alt="banner Image"
-            className="product-details-img"
-            src={urlFor(image && image[0])}
-          />
-          <Text>{artistName}</Text>
+        <Box className="artwork-detail-main-container">
+          <Box className="artwork-detail-fat-line" />
+          <Box className="artwork-detail-content-container">
+            <Box>
+              <Flex>
+                <Box className="artwork-detail-img-box">
+                  <img
+                    alt="banner Image"
+                    className="product-details-img"
+                    src={urlFor(image && image[0])}
+                  />
+                </Box>
+                <Box className="artwork-detail-content-top-text">
+                  <Text>{largenumber}</Text>
+                </Box>
+              </Flex>
+            </Box>
+            <Box className="artwork-detail-cat-name-container">
+              <Flex>
+                <Box>
+                  <HStack>
+                    {/* <Icon /> */}
+                    <Text>{cat}</Text>
+                  </HStack>
+                </Box>
+                <Box>
+                  <HStack>
+                    {/* <Icon /> */}
+                    <Text>{artistName}</Text>
+                  </HStack>
+                </Box>
+              </Flex>
+            </Box>
+            <Box className="artwork-detail-artwork-name-container">
+              <Text>{artworkName}</Text>
+            </Box>
+            <Box className="artwork-detail-block-price-container">
+              <Flex>
+                <Box>
+                  <Text>{blockDesc}</Text>
+                </Box>
+                <Box>
+                  <Text>{price}</Text>
+                </Box>
+              </Flex>
+            </Box>
+            <Box className="artwork-detail-desc-container">
+              <Text>{desc}</Text>
+              <Text>Quantity</Text>
+            </Box>
+            <Box>
+              <Flex>
+                <Box>
+                  <Button>ALOHA</Button>
+                </Box>
+                <Box>
+                  <Button>CIAO</Button>
+                </Box>
+              </Flex>
+            </Box>
+          </Box>
         </Box>
       </section>
     </>

@@ -18,6 +18,11 @@ export default {
         title: 'Artist Name',
         type: 'string',
       },
+      { 
+        name: 'artworkName',
+        title: 'ArtWork Name',
+        type: 'string',
+      },
       {
         name: 'largenumber',
         title: 'LargeNumber',
