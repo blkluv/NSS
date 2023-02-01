@@ -1,6 +1,7 @@
 //-------------- SECTIONS -----------
 .footer-banner-section{
     width: 100%;  
+    margin-bottom: 3rem;
 }
 
 
@@ -119,7 +120,6 @@
     align-items: center;
 }
 .footer-banner-product-btn {
-    
     border-radius: 0px ;
 	background-color: var(--clr-btn-bg) ;
 	color: var(--clr-btn-txt) ;
@@ -131,10 +131,11 @@
 //-------------- IMG SECTION -----------
 
 .footer-banner-image {
+    margin-top: 2rem;
     margin-left: 1rem;
     width: 235px;
     height: 200px;
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17,17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
     z-index: 1;
     @media (min-width: 412px) {

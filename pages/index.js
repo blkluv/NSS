@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import $ from "jquery";
 import Image from "next/image";
 //IMPORT MOTION
-// import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 // import Link from "next/link";
 //IMPORT client api from internal folder
 import { client } from "../lib/client";
@@ -10,7 +10,7 @@ import { client } from "../lib/client";
 //IMPORT Internal components
 import { FooterBanner, TopArt, Artwork } from "../components";
 // IMPORT CHAKRA tools
-import { Flex, Box, VStack, Text, Container } from "@chakra-ui/react";
+import { Flex, Box, VStack, Text} from "@chakra-ui/react";
 
 import { BiGhost } from "react-icons/bi";
 
@@ -19,6 +19,8 @@ import { BiGhost } from "react-icons/bi";
 
 //Import IMAGES
 import ShopNodeQR from "../dist/img/MetaNodesLab-stripe.png";
+
+
 
 const Home = ({ footerBannerData, headArtData, artworks }) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -64,13 +66,21 @@ const Home = ({ footerBannerData, headArtData, artworks }) => {
                 </Box>
               </VStack>
 
-              {/* <Flex justifyContent="center"> */}
+              <AnimatePresence>
               <Box className="nftDrop-artwork-div">
                 {artworks?.map((artwork) => (
+                  <motion.div
+                  className="artwork-container"
+                  initial={{ x: -100, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: 100, opacity: 0 }}
+                  transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
+                >
                   <Artwork key={artwork._id} artwork={artwork} />
+                  </motion.div>
                 ))}
               </Box>
-              {/* </Flex> */}
+              </AnimatePresence>
             </Box>
           </section>
 

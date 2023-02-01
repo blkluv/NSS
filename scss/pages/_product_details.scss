@@ -1,44 +1,211 @@
 //-------------- SECTIONS -----------
 .artwork-detail-main-container {
-    background-color: darkorange;
+    // background-color: darkorange;
     display: flex;
     height: 100%;
 }
 
 .artwork-detail-fat-line {
     // height: 100%;
-    width: 20%;
+    width: 10%;
     background-color: var(--clr-pink);
 }
 
 .artwork-detail-content-container{
-    width: 80%;
-    background-color: lightblue;
-   padding: 1rem;
+      // background-color: lightblue;
+    width: 90%;
+    
+}
+
+.artwork-detail-img-box {
+    // background-color: greenyellow;
+    margin-left: -2rem;
+    z-index: 0;
+    padding: 1rem;
+}
+
+.artwork-detail-largeNumber-box{
+    // background-color: brown;
+	margin-top: -23rem;
+    position: absolute;
+    right:10px ;
+    z-index: 1;
+}
+
+.artwork-detail-main-middle-container{
+    // background-color: azure;
+    padding: 0 1rem 0 0.5rem;
 }
 
 .artwork-detail-cat-name-container{
-    background-color: purple;
-}
-
-.artwork-detail-artwork-name-container{
-    background-color: yellow;
-}
-
-.artwork-detail-block-price-container{
-    background-color: green;
+    // background-color: purple;
+   margin-top: -1rem;
+    
 }
 
 .artwork-detail-desc-container{
-    background-color: greenyellow;
+    // background-color: greenyellow;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.artwork-detail-quantity-container{
+    // background-color: cyan;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.artwork-detail-btn-container {
+    margin-bottom: 2rem;
+}
+
+.artwork-detail-alsoLike-container {
+    margin: 10rem 0 7rem 0;
+}
+
+.artwork-detail-arrow-container {
+    margin: -3rem 0 0 -5.5rem
 }
 
 
-//-------------- TITLES SECTION -----------
 
-//CAROUSEL SECTION
+//-------------- TITLES SECTION -----------
+.artwork-detail-largeNumber-text{
+    font-family: var( --ft-spaceGro);
+	font-size: var(--font-size-70);
+	font-weight: 600;
+	color: var(--clr-pink);
+    transform: translateY(-80%)  rotate(90deg);  
+}
+
+.artwork-detail-cat-text {
+    font-family: var( --ft-spaceGro);
+	font-size: var(--font-size-14);
+    color: var( --clr-grey-dark);
+    font-weight: 400;
+    text-align: left;
+}
+
+.artwork-detail-artistName-text {
+    font-family: var( --ft-comi);
+	font-size: var(--font-size-20);
+    color: var( --clr-grey-text);
+    font-weight: 400;
+    text-align: right;
+    width: 5.2em;
+}
+
+.artwork-detail-artwork-name-text {
+    font-family: var( --ft-comi);
+	font-size: var(--font-size-30);
+    color: var( --clr-grey-text);
+    font-weight: 400;
+    text-align: left;
+    width: 7em;
+    line-height: 27px;
+    text-transform: uppercase;
+}
+
+.artwork-detail-block-text{
+    font-family: var( --ft-comi);
+	font-size: var(--font-size-20);
+    color: var( --clr-pink);
+    font-weight: 300;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.artwork-detail-price-text{
+    font-family: var( --ft-comi);
+	font-size: var(--font-size-20);
+    color: var( --clr-pink);
+    font-weight: 600;
+    text-align: right;
+    text-transform: capitalize;
+}
+
+.euro-price-span{
+    font-weight: 300;
+}
+
+.artwork-detail-desc-text {
+    font-family: var( --ft-comi);
+	font-size: var(--font-size-20);
+    color: var(--clr-btn-txt);
+    font-weight: 200;
+    text-align: left;
+    
+}
+
+.artwork-details-quantity {
+    font-family: var( --ft-spaceGro);
+	font-size: var(--font-size-20);
+    color: var(--clr-grey-shadow);
+    font-weight: 600;
+    text-align: left;
+}
+
+.artwork-quantity-num {
+    font-family: var( --ft-spaceGro);
+	font-size: var(--font-size-20);
+    color: var(--clr-grey-shadow);
+    font-weight: 600;
+    text-align: left;
+}
+
+.text-btn {
+    font-family: var(--ft-asap);
+	font-size: var(--font-size-20);
+    color: var(--clr-btn-txt);
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase;
+}
+
 
 //---------- BTN -------------
+.add-to-cart-btn{
+    border-radius: 0px ;
+	background-color: var(--clr-pink) ;
+	color: var(--clr-btn-txt) ;
+	border: 1px solid var(  --clr-btn-stroke);
+	padding: 2px 15px 2px 15px ;
+}
 
+.buy-now-btn{
+    border-radius: 0px ;
+	background-color: var(--clr-grey-shadow) ;
+	color: var(--clr-btn-txt) ;
+	border: 1px solid var(  --clr-btn-stroke);
+	padding: 2px 15px 2px 15px ;
+}
 
 //--------------- IMG ----
+.artwork-details-img{
+    width: 355px;
+    height: 500px;
+}
+
+
+//---------- OTHER --------
+.logo-dark-grey {
+    color: var( --clr-grey-dark);
+}
+
+.logo-heartbeat {
+    margin-right: -1.5rem;
+}
+
+.artwork-quantity-logo{
+    color: var( --clr-grey-dark);
+}
+
+.logo-btn {
+    margin-right: 1rem;
+}
+
+.artwork-detail-icon-enter {
+    transform: rotate(90deg);
+    color: var( --clr-grey-dark);
+}
