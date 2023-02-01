@@ -4,7 +4,7 @@ import React from "react";
 import { client, urlFor } from "../../lib/client";
 
 //IMPORT internal components
-// import { Artwork } from "../../components/Artwork";
+import { MiniArtwork } from "../../components";
 
 //IMPORT Context as hook
 import { useStateContext } from "../../context/StateContext";
@@ -42,11 +42,14 @@ const ArtworkDetails = ({ artwork, artworks }) => {
     buttonAdd,
     buttonBuy,
   } = artwork;
+
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
+
   const handleBuyNow = () => {
-    onAdd(product, qty);
+    onAdd(artwork, qty);
     setShowCart(true);
   };
+
   return (
     <>
       <section className="product-details-section">
@@ -145,7 +148,10 @@ const ArtworkDetails = ({ artwork, artworks }) => {
             <Box className="artwork-detail-btn-container">
               <Flex justifyContent="center" alignItems="center">
                 <Box mr="2rem">
-                  <button className="add-to-cart-btn">
+                  <button
+                    className="add-to-cart-btn"
+                    onClick={() => onAdd(artwork, qty)}
+                  >
                     <Flex>
                       <span className="logo-btn">
                         <GiWheelbarrow size="25px" />
@@ -155,7 +161,7 @@ const ArtworkDetails = ({ artwork, artworks }) => {
                   </button>
                 </Box>
                 <Box>
-                  <button className="buy-now-btn">
+                  <button className="buy-now-btn" onClick={handleBuyNow}>
                     <Flex>
                       <span className="logo-btn">
                         <TbPaperBag size="25px" />
@@ -183,6 +189,16 @@ const ArtworkDetails = ({ artwork, artworks }) => {
                   />
                 </Box>
               </Flex>
+
+              <Box className="marquee">
+                <Box className="maylike-products-container track">
+                  <Box>
+                    {artworks?.map((artwork) => (
+                      <MiniArtwork key={artwork._id} artwork={artwork} />
+                    ))}
+                  </Box>
+                </Box>
+              </Box>
             </Box>
           </Box>
         </Box>
@@ -200,9 +216,9 @@ export const getStaticPaths = async () => {
       }
       `;
 
-  const products = await client.fetch(query);
+  const artworks = await client.fetch(query);
 
-  const paths = products.map((artwork) => ({
+  const paths = artworks.map((artwork) => ({
     params: {
       slug: artwork.slug.current,
     },

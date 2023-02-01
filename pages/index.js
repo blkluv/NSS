@@ -42,6 +42,8 @@ const Home = ({ footerBannerData, headArtData, artworks }) => {
     };
   }, []);
 
+
+
   return (
     <>
       {isMobile ? (
