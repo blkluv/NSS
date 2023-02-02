@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState  } from "react";
 
 //IMPORT Toast to manage cart items
 import { toast } from "react-hot-toast";
@@ -21,19 +21,19 @@ export const StateContext = ({ children }) => {
 
   //-------- ADD PRODUCTS TO CART --------------
   //+ check if in card + update price + update qty
-  const onAdd = (product, quantity) => {
+  const onAdd = (artwork, quantity) => {
     const checkProductInCart = cartItems.find(
-      (item) => item._id === product._id
+      (item) => item._id === artwork._id
     );
 
     setTotalPrice(
-      (prevTotalPrice) => prevTotalPrice + product.price * quantity
+      (prevTotalPrice) => prevTotalPrice +artwork.price * quantity
     );
     setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity);
 
     if (checkProductInCart) {
       const updatedCartItems = cartItems.map((cartProduct) => {
-        if (cartProduct._id === product._id)
+        if (cartProduct._id === artwork._id)
           return {
             ...cartProduct,
             quantity: cartProduct.quantity + quantity,
@@ -42,21 +42,21 @@ export const StateContext = ({ children }) => {
 
       setCartItems(updatedCartItems);
     } else {
-      product.quantity = quantity;
+      artwork.quantity = quantity;
 
-      setCartItems([...cartItems, { ...product }]);
+      setCartItems([...cartItems, { ...artwork }]);
     }
 
-    toast.success(`${qty} ${product.itemName} added to the cart.`);
+    toast.success(`${qty} ${artwork.artworkName} added to the cart.`);
   };
 
 
 
   //-------- REMOVE PRODUCTS FROM CART --------------
 
-  const onRemove = (product) => {
-    foundProduct = cartItems.find((item) => item._id === product._id);
-    const newCartItems = cartItems.filter((item) => item._id !== product._id);
+  const onRemove = (artwork) => {
+    foundProduct = cartItems.find((item) => item._id === artwork._id);
+    const newCartItems = cartItems.filter((item) => item._id !== artwork._id);
 
     setTotalPrice(
       (prevTotalPrice) =>
@@ -72,7 +72,7 @@ export const StateContext = ({ children }) => {
 
   const toggleCartItemQuantity = (id, value) => {
     foundProduct = cartItems.find((item) => item._id === id);
-    index = cartItems.findIndex((product) => product._id === id);
+    index = cartItems.findIndex((artwork) => artwork._id === id);
     const newCartItems = cartItems.filter((item) => item._id !== id);
 
     if (value === "inc") {

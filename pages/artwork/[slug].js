@@ -27,7 +27,7 @@ import { BsArrow90DegRight } from "react-icons/bs";
 import {
   TbPaperBag,
   TbActivityHeartbeat,
-  TbSortDescending2,
+
 } from "react-icons/tb";
 
 import { FaFolder } from "react-icons/fa";
@@ -274,7 +274,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
 
 
   return {
-    props: { artworks, artwork, explorerBannerData },
+    props: { artworks, artwork  },
   };
 };
 

@@ -4,6 +4,8 @@ import React, { useRef } from "react";
 import { HiPlusSm, HiMinus } from "react-icons/hi";
 import { BsReverseBackspaceReverse } from "react-icons/bs";
 import { TiDeleteOutline } from "react-icons/ti";
+import { TbShoppingCartOff } from "react-icons/tb";
+
 import toast from "react-hot-toast";
 
 import { useStateContext } from "../context/StateContext";
@@ -48,9 +50,9 @@ const Cart = () => {
       <Box className="cart-wrapper" ref={cartRef}>
         <Box className="cart-container">
           <Button className="cart-heading" onClick={() => setShowCart(false)}>
-            <BsReverseBackspaceReverse fontSize="20px" />
+            <TbShoppingCartOff fontSize="20px" />
             <span className="heading">Your Cart</span>
-            <span className="cart-num-items">({totalQuantities} items)</span>
+            <span className="cart-num-items">[{totalQuantities} items]</span>
           </Button>
 
           {cartItems.length < 1 && (
@@ -82,20 +84,20 @@ const Cart = () => {
                   />
                   <Box className="item-desc">
                     <Box className="flex top">
-                      <Flex>
+                      <Flex direction="column">
                         <Text className="product-details-product-name">
-                          {item.itemName}
+                          {item.artworkName}
                         </Text>
                         <Text className="product-cart-price-tag" ml={2}>
-                          $ {item.price}
+                          {item.price} €
                         </Text>
                       </Flex>
                     </Box>
 
-                    <HStack mt={10}>
+                    <HStack mt={"5rem"}>
                       <Box>
                         <HStack className="flex-bottom">
-                          <Text className="minus">
+                          <Text className="artwork-details-quantity">
                             <span
                               onClick={() =>
                                 toggleCartItemQuantity(item._id, "dec")
@@ -104,10 +106,10 @@ const Cart = () => {
                               <HiMinus />
                             </span>
                           </Text>
-                          <Text className="num">
-                            <span onClick="">{item.quantity}</span>
+                          <Text className="artwork-quantity-num ">
+                            <span>{item.quantity}</span>
                           </Text>
-                          <Text className="plus">
+                          <Text className="artwork-details-quantity">
                             <span
                               onClick={() =>
                                 toggleCartItemQuantity(item._id, "inc")
@@ -141,11 +143,8 @@ const Cart = () => {
                     Subtotal:
                   </Text>
                   <Spacer />
-                  <Text
-                    className="cart-bottom-price"
-                    fontSize={["0.8rem", "1.5rem", "1.2rem"]}
-                  >
-                    $ {totalPrice}
+                  <Text className="cart-bottom-price">
+                    {totalPrice} <span>€</span>
                   </Text>
                 </HStack>
               </Box>
@@ -155,13 +154,12 @@ const Cart = () => {
                 justifyContent="right"
                 alignItems="right"
               >
-                <Button
-                  className="pay-btn"
-                  fontSize={["0.8rem", "1.5rem", "1.2rem"]}
+                <button
+                  className="stripe-btn text-btn"
                   onClick={handleCheckout}
                 >
                   Pay with Stripe
-                </Button>
+                </button>
               </Box>
             </Box>
           )}

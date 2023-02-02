@@ -5,6 +5,5 @@ export { default as Cart } from './Cart'
 export { default as HeroBanner } from './HeroBanner'
 export { default as TopArt } from './TopArt'
 export { default as Layout } from './Layout'
-
 export { default as Artwork } from './Artwork'
 export { default as MiniArtwork } from './MiniArtwork'
