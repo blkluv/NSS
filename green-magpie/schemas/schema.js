@@ -6,9 +6,11 @@ import banner from './banner';
 import headArt from './headArt';
 import artwork from './artwork';
 import footerBanner from './footerBanner';
+import explorerBanner from './explorerBanner';
+
 
 
 export default createSchema({
   name: 'default',
-  types: schemaTypes.concat([ product, banner,  footerBanner, headArt, artwork ]),
+  types: schemaTypes.concat([ product, banner,   footerBanner, headArt, artwork,explorerBanner ]),
 })

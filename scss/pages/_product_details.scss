@@ -210,17 +210,3 @@
     color: var( --clr-grey-dark);
 }
 
-//-------------- TEST Carousel
-
-.carousel__slide {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    .track {
-      display: flex;
-      overflow: hidden;
-    }
-  }

@@ -22,7 +22,7 @@ import ShopNodeQR from "../dist/img/MetaNodesLab-stripe.png";
 
 
 
-const Home = ({ footerBannerData, headArtData, artworks }) => {
+const Home = ({ footerBannerData, headArtData, artworks, explorerBannerData }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -78,7 +78,7 @@ const Home = ({ footerBannerData, headArtData, artworks }) => {
                   exit={{ x: 100, opacity: 0 }}
                   transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
                 >
-                  <Artwork key={artwork._id} artwork={artwork} />
+                  <Artwork key={artwork._id} artwork={artwork} explorerBanner={explorerBannerData.length && explorerBannerData[0]}/>
                   </motion.div>
                 ))}
               </Box>
@@ -142,8 +142,14 @@ export const getServerSideProps = async () => {
   const footerBannerQuery = '*[_type == "footerBanner"]';
   const footerBannerData = await client.fetch(footerBannerQuery);
 
+  const explorerBannerQuery = '*[_type == "explorerBanner"]';
+  const explorerBannerData = await client.fetch(explorerBannerQuery);
+
+
+  
+
   return {
-    props: { products, bannerData, footerBannerData, headArtData, artworks },
+    props: { products, bannerData,  footerBannerData, headArtData, artworks, explorerBannerData },
   };
 };
 

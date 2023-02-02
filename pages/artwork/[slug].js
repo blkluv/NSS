@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 //IMPORT IMAGES from client
 import { client, urlFor } from "../../lib/client";
@@ -9,21 +9,26 @@ import { MiniArtwork } from "../../components";
 //IMPORT Context as hook
 import { useStateContext } from "../../context/StateContext";
 
+// IMPORT SWIPER FEATURES
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/scrollbar";
+
+// import required modules
+import { Autoplay, Navigation } from "swiper";
+
 // IMPORT CHAKRA tools
-import {
-  Box,
-  Flex,
-  Stack,
-  Text,
-  Button,
-  HStack,
-  Spacer,
-} from "@chakra-ui/react";
+import { Box, Flex, Text, HStack, Spacer } from "@chakra-ui/react";
 
 //IMPORT ICONS
 import { HiPlusSm, HiMinus } from "react-icons/hi";
 import { BsArrow90DegRight } from "react-icons/bs";
-import { TbPaperBag, TbActivityHeartbeat } from "react-icons/tb";
+import {
+  TbPaperBag,
+  TbActivityHeartbeat,
+  TbSortDescending2,
+} from "react-icons/tb";
 
 import { FaFolder } from "react-icons/fa";
 import { GiWheelbarrow } from "react-icons/gi";
@@ -38,12 +43,23 @@ const ArtworkDetails = ({ artwork, artworks }) => {
     price,
     blockDesc,
     desc,
-    shortDesc,
     buttonAdd,
     buttonBuy,
   } = artwork;
 
+  
+
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
+  const [slug, setSlug] = useState({ current: null });
+  // const suggestedArtworks = artworks.filter(
+  //   (artwork) => artwork._id !== slug.current
+  // );
+
+  const filteredArtworks = artworks.filter((artwork) => {
+    console.log("artwork._id:", artwork._id);
+    console.log("slug.current:", slug.current);
+    return artwork._id !== slug.current;
+  });
 
   const handleBuyNow = () => {
     onAdd(artwork, qty);
@@ -189,17 +205,35 @@ const ArtworkDetails = ({ artwork, artworks }) => {
                   />
                 </Box>
               </Flex>
-
-              <Box className="marquee">
-                <Box className="maylike-products-container track">
-                  <Box>
-                    {artworks?.map((artwork) => (
-                      <MiniArtwork key={artwork._id} artwork={artwork} />
-                    ))}
-                  </Box>
+              <Swiper
+                slidesPerView={1.5}
+                loop={false}
+                centeredSlides={false}
+                spaceBetween={25}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                navigation={true}
+                modules={[Autoplay, Navigation]}
+                className="mySwiper"
+              >
+                <Box className="miniature-artwork-swiper-box">
+                  {filteredArtworks?.map((artwork) => (
+                    <SwiperSlide key={artwork._id}>
+                      <MiniArtwork artwork={artwork} />
+                    </SwiperSlide>
+                  ))}
                 </Box>
-              </Box>
+              </Swiper>
             </Box>
+            {/* <Box>
+              <TbSortDescending2
+                size="200px"
+                className="artwork-detail-icon-explore"
+              />
+            </Box> */}
+            
           </Box>
         </Box>
       </section>
@@ -237,10 +271,10 @@ export const getStaticProps = async ({ params: { slug } }) => {
   const artwork = await client.fetch(query); //to get the individual product
   const artworks = await client.fetch(artworksQuery);
 
-  console.log(artwork);
+
 
   return {
-    props: { artworks, artwork },
+    props: { artworks, artwork, explorerBannerData },
   };
 };
 
