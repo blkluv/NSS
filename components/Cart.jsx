@@ -2,16 +2,19 @@ import React, { useRef } from "react";
 
 //IMPORT ICONS
 import { HiPlusSm, HiMinus } from "react-icons/hi";
-import { BsReverseBackspaceReverse } from "react-icons/bs";
 import { TiDeleteOutline } from "react-icons/ti";
 import { TbShoppingCartOff } from "react-icons/tb";
 
+//IMPORT TOAST
 import toast from "react-hot-toast";
 
 import { useStateContext } from "../context/StateContext";
+
+//SANITY CLIENT IMG
 import { urlFor } from "../lib/client";
+
+//STRIPE
 import getStripe from "../lib/getStripe";
-//, toggleCartItemQuantity, onRemove
 
 import { Spacer, Box, Flex, Text, Button, HStack } from "@chakra-ui/react";
 

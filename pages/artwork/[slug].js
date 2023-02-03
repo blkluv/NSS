@@ -47,20 +47,9 @@ const ArtworkDetails = ({ artwork, artworks }) => {
     buttonBuy,
   } = artwork;
 
-  
-
   const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
-  const [slug, setSlug] = useState({ current: null });
-  // const suggestedArtworks = artworks.filter(
-  //   (artwork) => artwork._id !== slug.current
-  // );
 
-  const filteredArtworks = artworks.filter((artwork) => {
-    console.log("artwork._id:", artwork._id);
-    console.log("slug.current:", slug.current);
-    return artwork._id !== slug.current;
-  });
-
+  const [index, setIndex] = useState(0);
   const handleBuyNow = () => {
     onAdd(artwork, qty);
     setShowCart(true);
@@ -77,8 +66,9 @@ const ArtworkDetails = ({ artwork, artworks }) => {
                 <img
                   alt="banner Image"
                   className="artwork-details-img"
-                  src={urlFor(image && image[0])}
+                  src={urlFor(image && image[index])}
                 />
+                 
               </Box>
               <Box className="artwork-detail-largeNumber-box">
                 <Text className="artwork-detail-largeNumber-text">
@@ -219,9 +209,9 @@ const ArtworkDetails = ({ artwork, artworks }) => {
                 className="mySwiper"
               >
                 <Box className="miniature-artwork-swiper-box">
-                  {filteredArtworks?.map((artwork) => (
-                    <SwiperSlide key={artwork._id}>
-                      <MiniArtwork artwork={artwork} />
+                  {artworks?.map((item) => (
+                    <SwiperSlide key={item._id}>
+                      <MiniArtwork key={item._id} artwork={item} />
                     </SwiperSlide>
                   ))}
                 </Box>

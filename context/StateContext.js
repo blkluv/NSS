@@ -70,29 +70,55 @@ export const StateContext = ({ children }) => {
 
   //-------- TOGGLE PRODUCTS FROM CART --------------
 
+  // const toggleCartItemQuantity = (id, value) => {
+  //   foundProduct = cartItems.find((item) => item._id === id);
+  //   index = cartItems.findIndex((artwork) => artwork._id === id);
+  //   const newCartItems = cartItems.filter((item) => item._id !== id);
+
+  //   if (value === "inc") {
+  //     setCartItems([
+  //       ...newCartItems,
+  //       { ...foundProduct, quantity: foundProduct.quantity + 1 },
+  //     ]);
+  //     setTotalPrice((prevTotalPrice) => prevTotalPrice + foundProduct.price);
+  //     setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + 1);
+  //   } else if (value === "dec") {
+  //     if (foundProduct.quantity > 1) {
+  //       setCartItems([
+  //         ...newCartItems,
+  //         { ...foundProduct, quantity: foundProduct.quantity - 1 },
+  //       ]);
+  //       setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price);
+  //       setTotalQuantities((prevTotalQuantities) => prevTotalQuantities - 1);
+  //     }
+  //   }
+  // };
+
   const toggleCartItemQuantity = (id, value) => {
     foundProduct = cartItems.find((item) => item._id === id);
-    index = cartItems.findIndex((artwork) => artwork._id === id);
-    const newCartItems = cartItems.filter((item) => item._id !== id);
-
+  
     if (value === "inc") {
-      setCartItems([
-        ...newCartItems,
-        { ...foundProduct, quantity: foundProduct.quantity + 1 },
-      ]);
+      foundProduct = { ...foundProduct, quantity: foundProduct.quantity + 1 };
       setTotalPrice((prevTotalPrice) => prevTotalPrice + foundProduct.price);
       setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + 1);
     } else if (value === "dec") {
       if (foundProduct.quantity > 1) {
-        setCartItems([
-          ...newCartItems,
-          { ...foundProduct, quantity: foundProduct.quantity - 1 },
-        ]);
+        foundProduct = { ...foundProduct, quantity: foundProduct.quantity - 1 };
         setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price);
         setTotalQuantities((prevTotalQuantities) => prevTotalQuantities - 1);
       }
     }
+  
+    const newCartItems = cartItems.map((item) => {
+      if (item._id === id) {
+        return foundProduct;
+      }
+      return item;
+    });
+  
+    setCartItems(newCartItems);
   };
+  
 
   //-------- DYNAMIC QTY UPDATE --------------
   //every time we update prev +1

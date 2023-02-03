@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useState, useEffect } from 'react';
+import Loading from '../components/Loading';
 //IMPORT Toaster for small notifications pop-up
 import { Toaster } from 'react-hot-toast'
 
@@ -14,12 +15,15 @@ import "../scss/styles.scss"
 import { StateContext } from "../context/StateContext"
 
 function MyApp({ Component, pageProps }) {
+
   return (
   <StateContext>
   <ChakraProvider>
   <Layout>
     <Toaster />
-  <Component {...pageProps} />
+    <Loading>
+            <Component {...pageProps} />
+          </Loading>
   </Layout>
   </ChakraProvider>
   </StateContext>
