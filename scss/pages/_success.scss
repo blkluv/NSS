@@ -1,39 +1,36 @@
 //-------------- SECTIONS -----------
 .success-wrapper {
-    
     display: flex;
     justify-content: center;
     align-items: center;
+    
   }
-
+  
 .success {
-  min-height: 80vh;
-  margin-top: 3rem;
+height: 80vh;
   width: max-content;
 //   margin: auto;
-  padding: 50px;
+  padding: 1rem;
   border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: orangered;
+  background-color: var( --clr-grey-dark);
   h2 {
-  font-family: var(--ft-main-text);
+  margin-top: 0.5rem;
+  font-family: var(--ft-shoulder);
+  font-size: var(--font-size-25);
   text-transform: capitalize;
-  font-size: var(--font-size-20);
-  margin-top: 25px ;
   font-weight: 600;
   letter-spacing: 1px;
-  color: var(--clr-bg-white);
+  color: var(--clr-grey-text);
   white-space: nowrap;
   }
-  
 }
 
-.icon {
-    color: var(--clr-bg-white);
-    font-size: 40px;
+.success-img {
+  border-radius: 25px;
 }
 
 
@@ -44,25 +41,35 @@
 //-------------- TITLES SECTION -----------
 
 .email-msg {
-    font-family: var(--ft-main-text);
-    font-size: var(--font-size-14);
-    white-space: nowrap;
+  font-family: var(--ft-shoulder);
+    font-size: var(--font-size-16);
     letter-spacing: 1px;
     white-space: nowrap;
-    color: var(--clr-txt-grey-50);
+    color: var(--clr-grey-bright);
     text-align: center;
   }
 
   .description {
-    font-family: var(--ft-main-text);
-    font-size: var(--font-size-12);
+    font-family: var(--ft-shoulder);
+    font-size: var(--font-size-13);
     letter-spacing: 1px;
     color: var(--clr-txt-grey-30);
     text-align: center;
     margin-top: 1.5rem;
     a {
-    font-family: var(--ft-main-text);
+    font-family: var(--ft-asap);
     font-size: var(--font-size-12);
     color: var(--clr-txt-grey-30);
     }
+  }
+
+
+  //--------- BTN ----------
+  .continue-shopping {
+    margin-top: 1rem;
+    border-radius: 0px ;
+    background-color: var(--clr-grey-text) ;
+    color: var(--clr-grey-dark) ;
+    border: 1px solid var(  --clr-btn-stroke);
+    padding: 2px 15px 2px 15px ;
   }

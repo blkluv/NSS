@@ -16,16 +16,15 @@ export default async function handler(req, res) {
           const newImage = img
             .replace(
               "image-",
-              "https://cdn.sanity.io/images/vfxfwnaw/production/"
+              "https://cdn.sanity.io/images/5asd46vh/production/"
             )
             .replace("-webp", ".webp");
           console.log("IMAGE", newImage);
-
           return {
             price_data: {
               currency: "usd",
               product_data: {
-                name: item.itemName,
+                name: item.artworkName,
                 images: [newImage],
               },
               unit_amount: item.price * 100,
