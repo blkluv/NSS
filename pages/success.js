@@ -5,8 +5,6 @@ import Image from "next/image";
 import loading from "../dist/gif/cyberpunk-cyberpunk-anime.gif";
 import Link from "next/link";
 
-import { BsEmojiLaughing } from "react-icons/bs";
-
 import { useStateContext } from "../context/StateContext";
 import { runFireworks } from "../lib/utils";
 

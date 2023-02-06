@@ -1,6 +1,6 @@
 @forward 'base';
 @forward 'pages';
-@forward 'abstracts';
+
 @forward 'layout';
 @forward 'components/loading';
 @forward 'components/landingpage/bannerHero';
@@ -8,6 +8,7 @@
 @forward 'components/landingpage/nftDrop';
 @forward 'components/landingpage/footerBanner';
 @forward 'components/landingpage/footer';
+@forward 'components/landingpage/modal';
 @forward 'components/cart';
 @forward 'components/miniArtWork';
 

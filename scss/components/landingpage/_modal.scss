@@ -1,0 +1,28 @@
+//-------------- SECTIONS -----------
+.modal-body-section {
+    background-color: var(--clr-grey-dark) !important;
+}
+
+.modal-body-title {
+    font-family: var(--ft-spaceGro);
+    font-size: var(--font-size-30) !important;
+    font-weight: 300;
+    text-transform:uppercase;
+    color: var( --clr-grey-bright);
+   
+}
+
+.modal-body-text {
+    font-family: var(--ft-spaceGro);
+    font-weight: 100;
+    color: var( --clr-grey-bright);
+}
+
+.no-working {
+    font-weight: 900 !important;
+}
+
+.numbers {
+    font-weight: 400;
+    color: var(--clr-pink);
+}

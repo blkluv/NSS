@@ -101,7 +101,7 @@ const Home = ({ footerBannerData, headArtData, artworks }) => {
             className="prompt-not-smartphone-div"
           >
             <Box mr="4rem">
-              <BiGhost size="70px" className="prompt-not-smartphone" />
+              <BiGhost size="120px" className="prompt-not-smartphone icon-phatom" />
             </Box>
             <Box className="prompt-not-smartphone">
               This website has been designed as mobile-only.
@@ -117,6 +117,7 @@ const Home = ({ footerBannerData, headArtData, artworks }) => {
                 objectFit="cover"
                 src={ShopNodeQR}
                 alt="qr-code"
+                className="qr-code-mobile-only"
               />
             </Box>
           </Flex>

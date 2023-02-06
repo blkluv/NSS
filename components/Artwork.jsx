@@ -3,8 +3,7 @@ import Link from "next/link";
 import { urlFor } from "../lib/client";
 
 // IMPORT CHAKRA tools
-import { Text, Box, Stack } from "@chakra-ui/react";
-import artwork from "../green-magpie/schemas/artwork";
+import { Box, Stack } from "@chakra-ui/react";
 
 const Artwork = ({ artwork: { image, slug } }) => {
   return (

@@ -21,6 +21,25 @@
 	}
 }
 
+@mixin float-vertical-noShadow($duration, $timing-function, $iteration-count)  {
+	animation: float-vertical-noShadow $duration $timing-function $iteration-count;
+}
+
+@keyframes float-vertical-noShadow {
+	0% {
+		
+		transform: translatey(0px);
+	}
+	50% {
+		
+		transform: translatey(-15px);
+	}
+	100% {
+		
+		transform: translatey(0px);
+	}
+}
+
 @mixin float-horizontal($duration, $timing-function, $iteration-count) {
 	animation: float-horizontal $duration $timing-function $iteration-count;
 }
