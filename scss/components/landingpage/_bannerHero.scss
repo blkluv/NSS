@@ -37,11 +37,11 @@
 }
 
 .hero_banner-desc {
-    // background-color: aquamarine;
+    // background-color: var(--clr-pink);
     font-family: var(--ft-comi);
     font-size: var(--font-size-17);
-    font-weight: 200;
-    color: var( --clr-pink);
+    font-weight: 400;
+    color: var(--clr-btn-bg) !important;
     margin-left: 1rem;
     width: 10rem;
     margin-top: -2.5rem;
@@ -63,6 +63,7 @@
     margin-top: -6.2rem;
     margin-left: 4rem;
     height: fit-content;
+    color: var(--clr-pink) !important;
 }
 
 .pe-letter {

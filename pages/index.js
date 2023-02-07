@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import $ from "jquery";
 import Image from "next/image";
 //IMPORT MOTION
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import { staggerContainer, slideIn } from "../utils/motion";
 // import Link from "next/link";
 //IMPORT client api from internal folder
 import { client } from "../lib/client";
@@ -10,7 +11,7 @@ import { client } from "../lib/client";
 //IMPORT Internal components
 import { FooterBanner, TopArt, Artwork } from "../components";
 // IMPORT CHAKRA tools
-import { Flex, Box, VStack, Text} from "@chakra-ui/react";
+import { Flex, Box, VStack, Text } from "@chakra-ui/react";
 
 import { BiGhost } from "react-icons/bi";
 
@@ -19,8 +20,6 @@ import { BiGhost } from "react-icons/bi";
 
 //Import IMAGES
 import ShopNodeQR from "../dist/img/MetaNodesLab-stripe.png";
-
-
 
 const Home = ({ footerBannerData, headArtData, artworks }) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -41,8 +40,6 @@ const Home = ({ footerBannerData, headArtData, artworks }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-
 
   return (
     <>
@@ -67,22 +64,24 @@ const Home = ({ footerBannerData, headArtData, artworks }) => {
                   <Text className="nftDrop-artist-number">01</Text>
                 </Box>
               </VStack>
-
-              <AnimatePresence>
-              <Box className="nftDrop-artwork-div">
-                {artworks?.map((artwork) => (
-                  <motion.div
-                  className="artwork-container"
-                  initial={{ x: -100, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  exit={{ x: 100, opacity: 0 }}
-                  transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
-                >
-                  <Artwork key={artwork._id} artwork={artwork} />
-                  </motion.div>
-                ))}
-              </Box>
-              </AnimatePresence>
+              <motion.div
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+              >
+                <Box className="nftDrop-artwork-div">
+                  {artworks?.map((artwork, index) => (
+                    <motion.div variants={slideIn("left", "tween", 0.2, 1)}>
+                      <Artwork
+                        key={artwork._id}
+                        className={`artwork-${index + 1}`}
+                        artwork={artwork}
+                      />
+                    </motion.div>
+                  ))}
+                </Box>
+              </motion.div>
             </Box>
           </section>
 
@@ -101,7 +100,10 @@ const Home = ({ footerBannerData, headArtData, artworks }) => {
             className="prompt-not-smartphone-div"
           >
             <Box mr="4rem">
-              <BiGhost size="120px" className="prompt-not-smartphone icon-phatom" />
+              <BiGhost
+                size="120px"
+                className="prompt-not-smartphone icon-phatom"
+              />
             </Box>
             <Box className="prompt-not-smartphone">
               This website has been designed as mobile-only.
@@ -143,10 +145,8 @@ export const getServerSideProps = async () => {
   const footerBannerQuery = '*[_type == "footerBanner"]';
   const footerBannerData = await client.fetch(footerBannerQuery);
 
- 
-
   return {
-    props: { products, bannerData,  footerBannerData, headArtData, artworks},
+    props: { products, bannerData, footerBannerData, headArtData, artworks },
   };
 };
 

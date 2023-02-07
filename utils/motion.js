@@ -24,7 +24,8 @@ export const navVariants = {
 
 
 
-//CONTAINER + CHILDREN :  use it as main DIV
+//CONTAINER + CHILDREN as variable :  use it as main DIV: 
+//on call will trigger 2 sub transition
 export const staggerContainer = (staggerChildren, delayChildren) => ({
     hidden: {},
     show: {

@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+// import { motion } from "framer-motion";
+// import { navVariants } from "../utils/motion";
 
 //IMPORT ICON
 import { HiOutlineShoppingCart } from "react-icons/hi";
@@ -17,16 +19,20 @@ const Navbar = () => {
 
   return (
     <>
+      {/* <motion.nav variants={navVariants} initial="show" whileInView="show"> */}
       <Box height={10}>
         <Flex>
           <Box m={2}>
-            <HStack>
-              <IoCubeOutline size="20px" />
-              <Text className="navbar-logo-title">
-                <Link href="/">[metanodes.lab]</Link>
-              </Text>
-            </HStack>
+            <Flex>
+              <HStack>
+                <IoCubeOutline size="20px" />
+                <Text className="navbar-logo-title">
+                  <Link href="/">[metanodes.lab]</Link>
+                </Text>
+              </HStack>
+            </Flex>
           </Box>
+
           <Spacer />
           <Box m={2}>
             <button
@@ -41,6 +47,7 @@ const Navbar = () => {
           </Box>
         </Flex>
       </Box>
+      {/* </motion.nav> */}
     </>
   );
 };

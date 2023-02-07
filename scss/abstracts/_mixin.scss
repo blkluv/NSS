@@ -57,8 +57,16 @@
 		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
 		transform: translatex(0px);
 	}
+	
 }
+@for $i from 1 through 10 {
+	.artwork-#{$i} {
+	  animation-delay: 0.1s * $i;
+	  @include float-horizontal(1s, ease-in-out, infinite);
+	}
+  }
 
+  
 @mixin scale-soft($duration, $timing-function, $iteration-count) {
 	animation: scale-soft $duration $timing-function $iteration-count;
 }
@@ -91,3 +99,20 @@
 	  }
 	}
   }
+
+  //WOW animation for modal
+  @mixin translate($x, $y) {
+	transform: translate($x, $y);
+	}
+
+	@keyframes wow-animation {
+		0% {
+		@include translate(0, 100%);
+		}
+		100% {
+		@include translate(0, 0);
+		}
+		}
+
+
+		

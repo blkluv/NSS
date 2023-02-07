@@ -98,7 +98,7 @@
 }
 
 .artwork-detail-artwork-name-text {
-    font-family: var( --ft-comi);
+    font-family: var( --ft-noto);
 	font-size: var(--font-size-30);
     color: var( --clr-grey-text);
     font-weight: 400;
@@ -109,16 +109,16 @@
 }
 
 .artwork-detail-block-text{
-    font-family: var( --ft-comi);
+    font-family: var( --ft-noto);
 	font-size: var(--font-size-20);
     color: var( --clr-pink);
-    font-weight: 300;
+    font-weight: 400;
     text-align: left;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 .artwork-detail-price-text{
-    font-family: var( --ft-comi);
+    font-family: var( --ft-spaceGro);
 	font-size: var(--font-size-20);
     color: var( --clr-pink);
     font-weight: 600;
@@ -131,7 +131,7 @@
 }
 
 .artwork-detail-desc-text {
-    font-family: var( --ft-comi);
+    font-family: var(  --ft-noto);
 	font-size: var(--font-size-20);
     color: var(--clr-btn-txt);
     font-weight: 200;
@@ -167,7 +167,7 @@
 
 //---------- BTN -------------
 .add-to-cart-btn{
-    border-radius: 0px ;
+    
 	background-color: var(--clr-pink) ;
 	color: var(--clr-btn-txt) ;
 	border: 1px solid var(  --clr-btn-stroke);
@@ -175,7 +175,7 @@
 }
 
 .buy-now-btn{
-    border-radius: 0px ;
+
 	background-color: var(--clr-grey-shadow) ;
 	color: var(--clr-btn-txt) ;
 	border: 1px solid var(  --clr-btn-stroke);

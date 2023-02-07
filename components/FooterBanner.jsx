@@ -1,6 +1,7 @@
 import React from "react";
-import Link from "next/link";
-
+// import Link from "next/link";
+import { motion } from "framer-motion";
+import { staggerContainer, textVariant1, textVariant2 } from "../utils/motion";
 //Import IMAGES from client
 import { urlFor } from "../lib/client";
 
@@ -13,35 +14,48 @@ const FooterBanner = ({ footerBanner }) => {
   return (
     <>
       <section className="footer-banner-section">
-        <Box>
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.25 }}
+        >
           <Box>
-            <Flex>
-              <Box>
-                <Text className="hero_banner-huge-title exp-letter">
-                  {footerBanner.largeTitle1}
+            <Box>
+              <motion.div variants={textVariant1(1.1)}>
+                <Flex>
+                  <Box>
+                    <Text className="hero_banner-huge-title exp-letter">
+                      {footerBanner.largeTitle1}
+                    </Text>
+                  </Box>
+                  <Box>
+                    <BsArrow90DegRight
+                      size="110px"
+                      className="footer_banner-icon-enter"
+                    />
+                  </Box>
+                </Flex>
+              </motion.div>
+            </Box>
+
+            <Box>
+              <motion.div variants={textVariant1(1.2)}>
+                <Text className="hero_banner-huge-title l-letter">
+                  {footerBanner.largeTitle2}
                 </Text>
-              </Box>
-              <Box>
-                <BsArrow90DegRight
-                  size="110px"
-                  className="footer_banner-icon-enter"
-                />
-              </Box>
-            </Flex>
-          </Box>
+              </motion.div>
+            </Box>
 
-          <Box>
-            <Text className="hero_banner-huge-title l-letter">
-              {footerBanner.largeTitle2}
-            </Text>
+            <Box>
+              <motion.div variants={textVariant1(1.3)}>
+                <Text className="hero_banner-huge-title ore-letter">
+                  {footerBanner.largeTitle3}
+                </Text>
+              </motion.div>
+            </Box>
           </Box>
-
-          <Box>
-            <Text className="hero_banner-huge-title ore-letter">
-              {footerBanner.largeTitle3}
-            </Text>
-          </Box>
-        </Box>
+        </motion.div>
 
         <Box className="article-box">
           <Box className="footer-banner-desc-left">

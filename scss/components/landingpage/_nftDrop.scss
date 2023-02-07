@@ -81,8 +81,13 @@ margin-bottom: 3rem;
 	}
 }
 
-//-------------- BUTTON -----------
+.nftDrop-text {
+	font-size: var(--font-size-20) !important;
+	white-space: nowrap !important;
+	
+}
 
+//-------------- BUTTON -----------
 
 
 
@@ -90,6 +95,51 @@ margin-bottom: 3rem;
 .nftDrop-image {
     width: 250px;
 	height: 320px;
-    margin-bottom: 1rem;
-	border-radius: 25px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
 }
+
+
+
+
+
+// ----------- ARTWORK ----------- 
+.artwork-main-wrapper {
+	background-color: var(--clr-bg-grey-bg);
+	border: 1px solid var(--clr-pink);
+	margin-bottom: 1rem;
+	padding: 0.5rem;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+
+	@media (min-width: 412px) {
+		width: fit-content;
+	}
+}
+
+.artwork-1 {
+	animation: move-artwork-1 2s ease-in-out;
+  }
+  
+  @keyframes move-artwork-1 {
+	0% {
+	  transform: translateY(0);
+	}
+	100% {
+	  transform: translateY(-100px);
+	}
+  }
+  
+  .artwork-2 {
+	animation: move-artwork-2 2s ease-in-out;
+  }
+  
+  @keyframes move-artwork-2 {
+	0% {
+	  transform: translateY(0);
+	}
+	100% {
+	  transform: translateX(100px);
+	}
+  }
+  

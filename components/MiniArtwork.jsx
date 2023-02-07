@@ -6,10 +6,9 @@ import { urlFor } from "../lib/client";
 
 // IMPORT CHAKRA tools
 import { Text, Box, Flex, Spacer } from "@chakra-ui/react";
-import artwork from "../green-magpie/schemas/artwork";
 
 //IMPORT ICONS
-import { TbPaperBag, TbActivityHeartbeat, TbEyeCheck } from "react-icons/tb";
+import { TbActivityHeartbeat, TbEyeCheck } from "react-icons/tb";
 
 //IMPORT Context as hook
 import { useStateContext } from "../context/StateContext";

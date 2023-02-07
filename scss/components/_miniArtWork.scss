@@ -1,11 +1,10 @@
 //-------------- SECTIONS -----------
-.miniature-artwork-swiper-box {
- 
-}
+
 .miniature-artwork-display-section{
     // background-color: mediumslateblue;
-    border: 1px solid var(--clr-txt-blk);
-    border-radius: 8px;
+    border: 1px solid var(--clr-pink);
+    border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
     height: fit-content;
 
 }
@@ -67,26 +66,26 @@
 }
 
 .miniature-artwork-blockDesc{
-    font-family: var( --ft-comi);
-	font-size: var(--font-size-20);
+    font-family: var(--ft-noto);
+	font-size: var(--font-size-15);
     color: var( --clr-pink);
     font-weight: 300;
     text-align: left;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 .miniature-artwork-price{
-    font-family: var( --ft-comi);
-	font-size: var(--font-size-20);
+    font-family: var( --ft-spaceGro);
+	font-size: var(--font-size-17);
     color: var( --clr-pink);
     font-weight: 600;
     text-align: right;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 .miniature-artwork-shortDesc {
-    font-family: var( --ft-comi);
-	font-size: var(--font-size-20);
+    font-family: var(  --ft-noto);
+	font-size: var(--font-size-17);
     color: var(--clr-btn-txt);
     font-weight: 200;
     text-align: left;
@@ -113,6 +112,8 @@
 .miniature-artwork-image {
     width: 100%;
     height: 250px;
+    border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
 }
 
 
