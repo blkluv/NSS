@@ -52,9 +52,16 @@ const Home = ({ footerBannerData, headArtData, artworks }) => {
           </section>
 
           <section className="nftDrop-section">
-            <Box>
-              <Text className="nftDrop-title">[Latest NFT Drop]</Text>
-            </Box>
+            <motion.div
+              initial="hidden"
+              whileInView="show"
+              variants={staggerContainer}
+              viewport={{ once: false, amount: 0.25 }}
+            >
+              <motion.div variants={slideIn("left", "tween", 0.2, 0.5)}>
+                <Text className="nftDrop-title">[Latest NFT Drop]</Text>
+              </motion.div>
+            </motion.div>
             <Box>
               <VStack className="nftDrop-artist-name-and-number-div">
                 <Box className="nftDrop-artist-name-box">
@@ -73,11 +80,21 @@ const Home = ({ footerBannerData, headArtData, artworks }) => {
                 <Box className="nftDrop-artwork-div">
                   {artworks?.map((artwork, index) => (
                     <motion.div variants={slideIn("left", "tween", 0.2, 1)}>
-                      <Artwork
-                        key={artwork._id}
-                        className={`artwork-${index + 1}`}
-                        artwork={artwork}
-                      />
+                      <motion.div
+                        drag
+                        dragConstraints={{
+                          top: -50,
+                          left: -50,
+                          right: 50,
+                          bottom: 50,
+                        }}
+                      >
+                        <Artwork
+                          key={artwork._id}
+                          className={`artwork-${index + 1}`}
+                          artwork={artwork}
+                        />
+                      </motion.div>
                     </motion.div>
                   ))}
                 </Box>

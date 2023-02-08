@@ -1,7 +1,7 @@
 //-------------- SECTIONS -----------
 .footer-banner-section {
   width: 100%;
-
+ 
 }
 
 .footer-banner-desc-left {
@@ -19,6 +19,9 @@
   border-top-left-radius: 15px;
   margin-top: -2.5rem;
   padding: 1rem;
+  @media (min-width: 412px) {
+    margin-left: 1rem;
+  }
 }
 
 //-------------- TITLES SECTION -----------
@@ -100,7 +103,7 @@
 .footer-banner-desc-midText {
   // background-color: purple;
 
-  font-family: var(--ft-comi);
+  font-family: var(--ft-noto);
   color: var(--clr-pink);
   font-size: var(--font-size-15);
   text-transform: uppercase;

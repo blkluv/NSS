@@ -222,8 +222,7 @@ const ArtworkDetails = ({ artwork, artworks }) => {
                 size="200px"
                 className="artwork-detail-icon-explore"
               />
-            </Box> */}
-            
+            </Box> */}   
           </Box>
         </Box>
       </section>

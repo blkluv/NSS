@@ -107,40 +107,42 @@ const topArt = ({ headArt }) => {
                 <Modal isOpen={isOpen} onClose={onClose}>
                   <ModalOverlay />
                   <ModalContent className="modal-body-section">
-                    <ModalHeader className="modal-body-title">
-                      How to use the payment terminal{" "}
-                    </ModalHeader>
-                    <ModalCloseButton />
-                    <ModalBody className="modal-body-container">
-                      <Text className="modal-body-text">
-                        This website serves only as a portfolio and has no
-                        commercial intention. However, you can add art pieces to
-                        the cart and simulate a purchase using the Stripe
-                        Terminal.
-                        <br />
-                        <br />
-                        Please note that this is just a test mode and no actual
-                        funds will be transferred from any account.
-                        <br />
-                        <br />
-                        To validate a payment use: <br />
-                        <span className="no-working">card number:</span>{" "}
-                        <span className="numbers"> 4242 4242 4242 4242</span>
-                        <br />
-                        <span className="no-working">CVC:</span>
-                        <span className="numbers"> 567</span>
-                        <br />
-                        <br /> I have no working relationship with Vinay. I only
-                        use his images that I discovered on the Unsplash
-                        website.
-                      </Text>
-                    </ModalBody>
+                    <motion.div variants={textVariant1(1.1)}>
+                      <ModalHeader className="modal-body-title">
+                        How to use the payment terminal{" "}
+                      </ModalHeader>
+                      <ModalCloseButton />
+                      <ModalBody className="modal-body-container">
+                        <Text className="modal-body-text">
+                          This website serves only as a portfolio and has no
+                          commercial intention. However, you can add art pieces
+                          to the cart and simulate a purchase using the Stripe
+                          Terminal.
+                          <br />
+                          <br />
+                          Please note that this is just a test mode and no
+                          actual funds will be transferred from any account.
+                          <br />
+                          <br />
+                          To validate a payment use: <br />
+                          <span className="no-working">card number:</span>{" "}
+                          <span className="numbers"> 4242 4242 4242 4242</span>
+                          <br />
+                          <span className="no-working">CVC:</span>
+                          <span className="numbers"> 567</span>
+                          <br />
+                          <br /> I have no working relationship with Vinay. I
+                          only use his images that I discovered on the Unsplash
+                          website.
+                        </Text>
+                      </ModalBody>
 
-                    <ModalFooter>
-                      <button className="modal-body-btn" onClick={onClose}>
-                        Close
-                      </button>
-                    </ModalFooter>
+                      <ModalFooter>
+                        <button className="modal-body-btn" onClick={onClose}>
+                          Close
+                        </button>
+                      </ModalFooter>
+                    </motion.div>
                   </ModalContent>
                 </Modal>
               </VStack>

@@ -80,8 +80,16 @@
 	border: 1px solid var(  --clr-btn-stroke);
 	padding: 2px 30px 2px 30px !important;
 	margin-top: -2rem !important;
+    box-shadow: var(--clr-pink) 4px 4px 0 0;
+    text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+ &:active {
+    box-shadow: var(--clr-pink) 2px 2px 0 0;
+    transform: translate(2px, 2px);
+  }
 }
-
 
 
 //-------------- OTHER -----------
