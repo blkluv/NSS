@@ -1,5 +1,8 @@
 // ----- BASIC MOTIONS ----------
 
+//CLASSIC MAKES APPEAR
+
+
 //NAVBAR FROM UP TO 0
 export const navVariants = {
     hidden: {

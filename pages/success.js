@@ -27,12 +27,12 @@ const sucess = () => {
     <>
       <section className="success-page-section">
         <Box className="success-wrapper">
-          <Box className="success">
+          <Box className="success-main-container">
             <Box>
               <Image
                 src={loading}
                 width={370}
-                height={500}
+                height={400}
                 objectFit="cover"
                 alt="Thank you for your order"
                 className="success-img"

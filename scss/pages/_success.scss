@@ -1,25 +1,29 @@
 //-------------- SECTIONS -----------
 .success-wrapper {
+  
     display: flex;
     justify-content: center;
     align-items: center;
     
   }
   
-.success {
-height: 80vh;
+.success-main-container {
+  
+  height: max-content;
   width: max-content;
 //   margin: auto;
   padding: 1rem;
-  border-radius: 15px;
+  
+  // border-top-left-radius: 8px;
+	// border-top-right-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: var( --clr-grey-dark);
+  background-color: transparent;
   h2 {
   margin-top: 0.5rem;
-  font-family: var(--ft-shoulder);
+   font-family: var(--ft-noto);
   font-size: var(--font-size-25);
   text-transform: capitalize;
   font-weight: 600;
@@ -41,7 +45,7 @@ height: 80vh;
 //-------------- TITLES SECTION -----------
 
 .email-msg {
-  font-family: var(--ft-shoulder);
+  font-family: var(--ft-noto);
     font-size: var(--font-size-16);
     letter-spacing: 1px;
     white-space: nowrap;
@@ -50,7 +54,7 @@ height: 80vh;
   }
 
   .description {
-    font-family: var(--ft-shoulder);
+    font-family: var(--ft-noto);
     font-size: var(--font-size-13);
     letter-spacing: 1px;
     color: var(--clr-txt-grey-30);
@@ -66,10 +70,11 @@ height: 80vh;
 
   //--------- BTN ----------
   .continue-shopping {
+    font-family: var( --ft-asap);
     margin-top: 1rem;
     border-radius: 0px ;
-    background-color: var(--clr-grey-text) ;
+    background-color: var(--clr-pink) ;
     color: var(--clr-grey-dark) ;
-    border: 1px solid var(  --clr-btn-stroke);
+    border: 1px solid var(--clr-grey-dark);
     padding: 2px 15px 2px 15px ;
   }
