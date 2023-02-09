@@ -1,4 +1,5 @@
 //-------------- CSS ANIMATIONS -----------
+//@import '../abstracts/mixin';
 //.div {
 //	@include float-vertical(3s, ease-in-out, infinite);
 //}
@@ -59,12 +60,12 @@
 	}
 	
 }
-@for $i from 1 through 10 {
-	.artwork-#{$i} {
-	  animation-delay: 0.1s * $i;
-	  @include float-horizontal(1s, ease-in-out, infinite);
-	}
-  }
+// @for $i from 1 through 10 {
+// 	.artwork-#{$i} {
+// 	  animation-delay: 0.1s * $i;
+// 	  @include float-horizontal(1s, ease-in-out, infinite);
+// 	}
+//   }
 
   
 @mixin scale-soft($duration, $timing-function, $iteration-count) {

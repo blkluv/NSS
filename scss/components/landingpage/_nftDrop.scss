@@ -1,3 +1,4 @@
+
 //-------------- SECTIONS -----------
 .nftDrop-section {
 // background-color: pink;
@@ -53,6 +54,12 @@ margin-bottom: 3rem;
     margin-left: 1rem;
     width: 10rem;
    
+}
+
+.drag-play {
+	color: var(--clr-pink);
+	font-weight: 100;
+
 }
 
 .nftDrop-artist-name-text {
@@ -117,29 +124,3 @@ margin-bottom: 3rem;
 	}
 }
 
-.artwork-1 {
-	animation: move-artwork-1 2s ease-in-out;
-  }
-  
-  @keyframes move-artwork-1 {
-	0% {
-	  transform: translateY(0);
-	}
-	100% {
-	  transform: translateY(-100px);
-	}
-  }
-  
-  .artwork-2 {
-	animation: move-artwork-2 2s ease-in-out;
-  }
-  
-  @keyframes move-artwork-2 {
-	0% {
-	  transform: translateY(0);
-	}
-	100% {
-	  transform: translateX(100px);
-	}
-  }
-  

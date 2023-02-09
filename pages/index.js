@@ -3,7 +3,7 @@ import $ from "jquery";
 import Image from "next/image";
 //IMPORT MOTION
 import { motion } from "framer-motion";
-import { staggerContainer, slideIn } from "../utils/motion";
+import { staggerContainer, slideIn, zoomIn } from "../utils/motion";
 // import Link from "next/link";
 //IMPORT client api from internal folder
 import { client } from "../lib/client";
@@ -61,45 +61,53 @@ const Home = ({ footerBannerData, headArtData, artworks }) => {
               <motion.div variants={slideIn("left", "tween", 0.2, 0.5)}>
                 <Text className="nftDrop-title">[Latest NFT Drop]</Text>
               </motion.div>
+
+              <motion.div variants={slideIn("left", "tween", 0.2, 1.0)}>
+                <Text className="nftDrop-title drag-play">Drag & play</Text>
+              </motion.div>
             </motion.div>
-            <Box>
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+            >
               <VStack className="nftDrop-artist-name-and-number-div">
                 <Box className="nftDrop-artist-name-box">
-                  <Text className="nftDrop-artist-name-text">VINAY</Text>
+                  <motion.div variants={slideIn("right", "tween", 0.5, 1.0)}>
+                    <Text className="nftDrop-artist-name-text">VINAY</Text>
+                  </motion.div>
                 </Box>
+
                 <Box className="nftDrop-artist-number-box">
-                  <Text className="nftDrop-artist-number">01</Text>
+                  <motion.div variants={slideIn("right", "tween", 0.5, 1.1)}>
+                    <Text className="nftDrop-artist-number">01</Text>
+                  </motion.div>
                 </Box>
               </VStack>
-              <motion.div
-                variants={staggerContainer}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}
-              >
-                <Box className="nftDrop-artwork-div">
-                  {artworks?.map((artwork, index) => (
-                    <motion.div variants={slideIn("left", "tween", 0.2, 1)}>
-                      <motion.div
-                        drag
-                        dragConstraints={{
-                          top: -50,
-                          left: -50,
-                          right: 50,
-                          bottom: 50,
-                        }}
-                      >
-                        <Artwork
-                          key={artwork._id}
-                          className={`artwork-${index + 1}`}
-                          artwork={artwork}
-                        />
-                      </motion.div>
+
+              <Box className="nftDrop-artwork-div">
+                {artworks?.map((artwork, index) => (
+                  <motion.div variants={slideIn("left", "tween", 0.2, 1)}>
+                    <motion.div
+                      drag
+                      dragConstraints={{
+                        top: -50,
+                        left: -50,
+                        right: 50,
+                        bottom: 50,
+                      }}
+                    >
+                      <Artwork
+                        key={artwork._id}
+                        className={`artwork-${index + 1}`}
+                        artwork={artwork}
+                      />
                     </motion.div>
-                  ))}
-                </Box>
-              </motion.div>
-            </Box>
+                  </motion.div>
+                ))}
+              </Box>
+            </motion.div>
           </section>
 
           <section>
