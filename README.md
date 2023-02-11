@@ -1,5 +1,5 @@
 # NFT SHOP WITH STRIPE 0.2
-Artwork shop using **NEXTJS** **SASS** **SANITY** & **STRIPE**
+Mobile-Only Artwork shop using **NEXTJS** **SASS** **SANITY** & **STRIPE**
 
 <p>📦NPM Packages used:</p>
 <p>✔️Babel/core</p>
@@ -16,7 +16,7 @@ Artwork shop using **NEXTJS** **SASS** **SANITY** & **STRIPE**
 
 
 
-metanodes-lab-stripe.vercel.app > Stay tuned for more updates
+[metanodes-lab-stripe.vercel.app](https://metanodes-lab-stripe.vercel.app/) > Stay tuned for more updates
 
 
-![NFT SHOP WITH STRIPE](C:\Users\VicThor\Pictures\gitHub.PNG)
+![NFT SHOP WITH STRIPE] file:///C:/Users/VicThor/Pictures/gitHub.PNG
