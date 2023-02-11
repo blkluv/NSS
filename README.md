@@ -1,5 +1,5 @@
 # NFT SHOP WITH STRIPE 0.2
-Mobile-Only Artwork shop using **NEXTJS** **SASS** **SANITY** & **STRIPE**
+Mobile-Only Artwork shop using **NEXTJS** - **FRAMER-MOTION** - **SASS** - **SANITY** & **STRIPE**
 
 <p>📦NPM Packages used:</p>
 <p>✔️Babel/core</p>
