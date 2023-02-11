@@ -19,4 +19,4 @@ Mobile-Only Artwork shop using **NEXTJS** **SASS** **SANITY** & **STRIPE**
 [metanodes-lab-stripe.vercel.app](https://metanodes-lab-stripe.vercel.app/) > Stay tuned for more updates
 
 
-![NFT-SHOP-MOCKUP](/Users/VicThor/Pictures/gitHub.PNG "NFT-SHOP-STRIPE")
+![NFT-SHOP-MOCKUP](/VicThor/Pictures/gitHub.PNG "NFT-SHOP-STRIPE")
