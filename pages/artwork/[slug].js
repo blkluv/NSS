@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+import { motion } from "framer-motion";
+import { staggerContainer, textVariant1, textVariant2, slideIn } from "../../utils/motion";
+
 //IMPORT IMAGES from client
 import { client, urlFor } from "../../lib/client";
 
@@ -58,9 +61,17 @@ const ArtworkDetails = ({ artwork, artworks }) => {
   return (
     <>
       <section className="product-details-section">
+      
         <Box className="artwork-detail-main-container">
           <Box className="artwork-detail-fat-line" />
           <Box className="artwork-detail-content-container">
+          <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          <motion.div variants={slideIn('left', 'tween', 0.2, 0.5 )}>
             <Box>
               <Box className="artwork-detail-img-box">
                 <img
@@ -76,14 +87,19 @@ const ArtworkDetails = ({ artwork, artworks }) => {
                 </Text>
               </Box>
             </Box>
+            </motion.div>
+            
             <Box className="artwork-detail-main-middle-container">
               <Box className="artwork-detail-cat-name-container">
+              <motion.div variants={slideIn('left', 'spring', 0.4, 0.8 )}>
                 <Flex justifyContent="left">
                   <Box mt={3}>
+                  
                     <HStack>
                       <FaFolder size="20px" className="logo-dark-grey " />
                       <Text className="artwork-detail-cat-text">{cat}</Text>
                     </HStack>
+                  
                   </Box>
                   <Spacer />
                   <Box className="artwork-detail-name-container">
@@ -99,15 +115,19 @@ const ArtworkDetails = ({ artwork, artworks }) => {
                     </HStack>
                   </Box>
                 </Flex>
+                </motion.div>
               </Box>
 
               <Box className="artwork-detail-artwork-name-container">
+              <motion.div variants={textVariant1(1.1)}>
                 <Text className="artwork-detail-artwork-name-text">
                   {artworkName}
                 </Text>
+                </motion.div>
               </Box>
 
               <Box className="artwork-detail-block-price-container">
+              <motion.div variants={textVariant1(1.2)}>
                 <Flex>
                   <Box>
                     <Text className="artwork-detail-block-text">
@@ -121,9 +141,13 @@ const ArtworkDetails = ({ artwork, artworks }) => {
                     </Text>
                   </Box>
                 </Flex>
+                </motion.div>
               </Box>
+
               <Box className="artwork-detail-desc-container">
+              <motion.div variants={textVariant1(1.3)}>
                 <Text className="artwork-detail-desc-text">{desc}</Text>
+                </motion.div>
               </Box>
             </Box>
 
@@ -178,21 +202,32 @@ const ArtworkDetails = ({ artwork, artworks }) => {
                 </Box>
               </Flex>
             </Box>
+            </motion.div>
 
+            <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false }}
+        >
             <Box className="artwork-detail-alsoLike-container">
               <Flex>
                 <Box>
+                <motion.div variants={slideIn('left', 'tween', 0.4, 0.8 )}>
                   <Text className="nftDrop-title artwork-detail-also-like">
                     [You may
                     <br />
                     also like]
                   </Text>
+                  </motion.div>
                 </Box>
                 <Box className="artwork-detail-arrow-container">
+                <motion.div variants={slideIn('left', 'tween', 0.4, 1.0 )}>
                   <BsArrow90DegRight
                     size="200px"
                     className="artwork-detail-icon-enter"
                   />
+                  </motion.div>
                 </Box>
               </Flex>
               <Swiper
@@ -217,6 +252,7 @@ const ArtworkDetails = ({ artwork, artworks }) => {
                 </Box>
               </Swiper>
             </Box>
+            </motion.div>
             {/* <Box>
               <TbSortDescending2
                 size="200px"
@@ -225,6 +261,7 @@ const ArtworkDetails = ({ artwork, artworks }) => {
             </Box> */}   
           </Box>
         </Box>
+    
       </section>
     </>
   );

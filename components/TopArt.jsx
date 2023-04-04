@@ -133,7 +133,14 @@ const topArt = ({ headArt }) => {
                           <br />
                           <br /> I have no working relationship with Vinay. I
                           only use his images that I discovered on the Unsplash
-                          website.
+                          website. Find more about his art on{" "}
+                          <a
+                            href="https://bit.ly/40Yrgll"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <span className=" numbers"> Unsplash</span>
+                          </a>
                         </Text>
                       </ModalBody>
 
