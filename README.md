@@ -1,10 +1,6 @@
-# NFT SHOP WITH STRIPE 0.2
-- Mobile-Only Artwork shop using **NEXTJS** - **SASS** - **SANITY** - **STRIPE** & **FRAMER-MOTION**
-  <p> </p>
-
 # Mobile-Only Artworks Online-Shop
 
-Welcome to this demo of a Mobile-Only Multiple Pages Application that showcases an online-shop selling artworks. 
+Welcome to this demo of a Mobile-Only Multiple Pages Application that showcases an online-shop selling artworks. Fully built with **NEXTJS** - **SASS** - **SANITY** - **STRIPE** & **FRAMER-MOTION**
 
 ## Background
 This project was originally crafted as a demo for an artist client. The unique approach of this project was to limit the accessibility of the website to mobile devices only. While it may be seen as a controversial decision, it was to demonstrate the options available to the client.
@@ -22,13 +18,6 @@ This project was originally crafted as a demo for an artist client. The unique a
 ## Testing Payments
 
 The shop is integrated with Stripe in the test mode. You can follow the provided guidelines to simulate transactions and explore the complete purchase process.
-
-## Feedback
-
-Any feedback or contributions to enhance the functionality or the codebase are welcome!
-
-
-
 
 
 ![gitHub](https://user-images.githubusercontent.com/98230162/218258028-f2d8beea-238a-4d70-b4f3-1dc1cece1e88.PNG)
@@ -52,6 +41,11 @@ Any feedback or contributions to enhance the functionality or the codebase are w
 <p>✔️React-icons</p>
 <p>✔️Sass</p>
 <p>✔️Swiper</p>
+
+
+## Feedback
+
+Any feedback or contributions to enhance the functionality or the codebase are welcome!
 
 
 
