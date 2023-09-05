@@ -1,6 +1,7 @@
 # Mobile-Only Artworks Online-Shop
 
-Welcome to this demo of a Mobile-Only Multiple Pages Application that showcases an online-shop selling artworks. Fully built with **NEXTJS** - **SASS** - **SANITY** - **STRIPE** & **FRAMER-MOTION**
+Welcome to this demo of a Mobile-Only Multiple Pages Application that showcases an online-shop selling artworks. 
+<p>Fully built with **NEXTJS** - **SASS** - **SANITY** - **STRIPE** & **FRAMER-MOTION**</p>
 
 ## Background
 This project was originally crafted as a demo for an artist client. The unique approach of this project was to limit the accessibility of the website to mobile devices only. While it may be seen as a controversial decision, it was to demonstrate the options available to the client.
