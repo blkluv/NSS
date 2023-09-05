@@ -2,11 +2,32 @@
 - Mobile-Only Artwork shop using **NEXTJS** - **SASS** - **SANITY** - **STRIPE** & **FRAMER-MOTION**
   <p> </p>
 
-# Crypto News Platform api
-- Crypto Prices & News **APi management** using **ASTRO** - **TYPESCRIPT** - **REACT** - **TAILWIND** - **DAISYUI** & **RAPIDAPI** 
-<p>This installment of the Astro project belongs to the 'Revamped Legacy Projects' series. The initial project was launched in 2018, utilizing React and Redux. The moment has come for an evolution. The present undertaking draws inspiration from its predecessor while being entirely constructed with Astro, React, TypeScript & Tailwind.</p>
-<p> Deployed on August 2023: https://cryptosucksagain.netlify.app/</p>
-[metanodes-lab-stripe.vercel.app](https://metanodes-lab-stripe.vercel.app/) > Stay tuned for more updates
+# Mobile-Only Artworks Online-Shop
+
+Welcome to this demo of a Mobile-Only Multiple Pages Application that showcases an online-shop selling artworks. 
+
+## Background
+This project was originally crafted as a demo for an artist client. The unique approach of this project was to limit the accessibility of the website to mobile devices only. While it may be seen as a controversial decision, it was to demonstrate the options available to the client.
+
+**Note**: The project might not consistently adhere to best practices due to its demonstration nature.
+
+## Features
+
+- **Fully Functional**: Despite being a demo, the online-shop is fully functional. 
+- **Interactive**: Feel free to:
+  - Add or remove products from the cart.
+  - Modify quantities.
+  - Follow the guidelines to validate a sale with Stripe in the test version.
+
+## Testing Payments
+
+The shop is integrated with Stripe in the test mode. You can follow the provided guidelines to simulate transactions and explore the complete purchase process.
+
+## Feedback
+
+Any feedback or contributions to enhance the functionality or the codebase are welcome!
+
+
 
 
 
